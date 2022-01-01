@@ -1,0 +1,77 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    "object-fit": (
+      property: object-fit,
+      class: object,
+      values:(
+        contain,
+        cover,
+        fill,
+        none,
+        scale-down,
+      ),
+    ),
+    "width":(
+      property: width,
+      responsive: true,
+      class: w,
+      values:(
+        20: 20%,
+        25: 25%,
+        40: 40%,
+        50: 50%,
+        60: 60%,
+        75: 75%,
+        80: 80%,
+        100: 100%,
+        auto: auto,
+      ),
+    ),
+    "height":(
+      property: height,
+      responsive: true,
+      class: h,
+      values:(
+        x0\.53 : 53px,
+        x1\.2  : 120px,
+        x2\.56 : 256px,
+        x3\.45 : 345px,
+        x4     : 400px,
+        x5\.59 : 559px,
+        100    : 100%,
+        auto   : auto,
+      ),
+    ),
+    "min-height":(
+      property: min-height,
+      responsive: true,
+      class: min-h,
+      values:(
+        x3\.45: 345px,
+        x3\.5 : 350px,
+      ),
+    ),
+    "z-index":(
+      property: z-index,
+      class: z-index,
+      values:(
+        9998: 9998,
+        9999: 9999,
+        10000: 10000,
+        10001: 10001,
+      ),
+    ),
+    "overflow-y":(
+      property: overflow-y,
+      responsive: true,
+      class: overflow-y,
+      values:(
+        auto,
+        hidden,
+        visible,
+        scroll,
+      ),
+    ),
+  )
+);

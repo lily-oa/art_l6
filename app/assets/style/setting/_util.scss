@@ -1,0 +1,94 @@
+/*  各種設定  */
+// 背景圖
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// img用
+.object-fit-cover {
+  object-fit: cover;
+  object-position: right bottom; //定位在正中央
+  height: inherit;
+}
+
+//line-height 對齊用
+.lh-0{
+  line-height: 0;
+}
+
+//通用hover
+.useHover_1{
+  &:hover {
+    color: $secondary !important;
+    border-bottom: 1px solid $secondary;
+  }
+}
+.useHover_1{
+  border-bottom: 1px solid transparent;
+}
+
+// nav-scroller.ejs hover
+.border__bottom__hover{
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background: $secondary;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition-duration: .2s;
+    opacity: 0;
+  }
+
+  &:hover {
+    &::before{
+      width: 100%;
+      opacity: 1;
+    }
+  }
+  &--checked{
+    &::before{
+      width: 100%;
+      opacity: 1;
+    }
+  }
+}
+
+// swiper.ejs Hover 輪播用
+.colorHover{
+  &--secondary{
+    color: #000;
+    &:hover{
+      color: $secondary !important;
+    }
+  }
+}
+
+// toUpBtn.ejs hover
+.transform-y-1{
+  &:hover{
+    transform: translateX(-5px);
+    color: $primary;
+  }
+}
+
+.transition-duration-1{
+  transition-duration: .2s;
+}
+
+// 每個頁面當按下右下方的 "^" 返迴最上方的按鈕時更換顏色 
+.bg-secondary{
+  background-color: $secondary !important;
+}
+
+// 設置 sweetaler2 z-index 的值大於它原本的，SweetAlert2 的容器z-index: 1060默認有。 
+// 為了讓它的彈跳視窗可以在所有的物件的最上方
+.swal2-container {
+  z-index: 20000 !important;
+}

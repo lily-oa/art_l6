@@ -1,0 +1,106 @@
+<!-- 登入 Modal -->
+<div 
+  class="modal fade z-index-10000" 
+  id="loginModal" 
+  tabindex="-1" 
+  aria-labelledby="loginModalLabel" 
+  aria-hidden="true"
+  style="z-index: 1100;"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-3 border-3 border-bottom-0 border-start-0 border-end-0 border-secondary">
+      <div class="modal-header">
+        <h5 
+          class="modal-title text-primary fw-bolder fs-3" 
+          id="exampleModalLabel"
+        >
+          登入 Sing in
+        </h5>
+        <button 
+          type="button" 
+          class="btn-close" 
+          data-bs-dismiss="modal" 
+          aria-label="Close"
+        >
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="loginModal-check js-modal-login-check">
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label fs-5">帳號</label>
+            <input 
+              type="email"
+              name="Email"
+              class="form-control js-modal-login-input js-user-email"
+              id="loginEmail"
+              arial-describedby="emailHelp"
+              placeholder="請輸入您的電子信箱"
+              autocomplete="username"
+              required
+            >
+            <!--信箱驗證-->
+            <p 
+              class="js-validate-msg validate-msg fs-8 text-danger text-end pt-2"
+            >
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label fs-5">密碼</label>
+            <input 
+              type="password"
+              class="form-control"
+              id="loginPassword"
+              placeholder="請輸入您的密碼"
+              autocomplete="current-password"
+            >
+          </div>
+          <!--埋入跳轉按鈕，另一個忘記密碼的互動視窗-->
+          <a 
+            href="#forgotPasswordModal" 
+            data-bs-target="#forgotPasswordModal"
+            data-bs-toggle="modal"
+            data-bs-dismiss="modal"
+            class="text-secondary forgotPasswordModal-btn"
+          >
+            忘記密碼
+          </a>
+          <button
+            type="submit"
+            data-bs-dismiss="modal"
+            class="btn btn-secondary btn-lg my-3 rounded-pill w-100"
+            
+          >
+            登入
+          </button>
+        </form>
+        <div class="position-relative my-4">
+          <div class="progress" style="height: 2px;">
+            <div
+              class="progress-bar bg-light"
+              role="progressbar"
+              style="width: 100%;"
+              aria-valuenow="50"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+            </div>
+          </div> 
+          <div class="position-absolute top-0 start-50 translate-middle px-3 bg-white fs-6 d-flex">
+            <!-- sm及以上顯示-->
+            <p class="text-wordColor_1 d-none d-sm-block">還沒有帳號？</p> 
+            <a 
+              href="#"
+              data-bs-target="#registerModal"
+              data-bs-toggle="modal"
+              data-bs-dismiss="modal"
+              class="link-primary useHover_1 registerModal-btn"
+            >
+              註冊一個帳號
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

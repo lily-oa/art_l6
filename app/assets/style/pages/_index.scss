@@ -1,0 +1,115 @@
+// section ticket
+.card_pic{
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+}
+.card_date{
+  writing-mode: vertical-lr; //垂直字體
+
+}
+.card_icon{
+  width: 20px;
+  height: 20px;
+  &:hover{
+    background: $wordColor_1;
+  }
+}
+
+// pad(992)
+@include pad{
+  .container{
+    max-width: 940px;
+  }
+  section .card-text{
+    font-size: $h11-font-size !important;
+  }
+}
+
+// mobile(768)
+@include mobile{
+  .container{
+    max-width: 100%;
+    .card_pic{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right bottom;
+    }
+    .ticket{
+      padding: 0 !important;
+    }
+    .card-body{
+      padding: 8px 15px 24px 15px !important;
+    }
+    .card-title{
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+    }
+  }
+}
+
+// mobile-ms(414)
+@include mobile-ms{
+  .container{
+    .card-body{
+      padding: 6px 15px 20px 15px ;
+    }
+    .card-title{
+      margin-top: 10px;
+      font-size: $h11-font-size;
+      .card_sDate{
+        font-size: $h12-font-size;
+        margin-top: 8px;
+        margin-left: 0 !important;
+      }
+    }
+    .card_sIcon{
+      width: 6x;
+      height: 6px;
+    }
+  }
+}
+/*----------------------------------------*/
+// section back
+.back{
+  padding: 60px 0 40px 0;
+  &_bgpic{
+    background: url('https://github.com/hexschool/webLayoutTraining1st/blob/master/exhibition-week6/people2.png?raw=true');
+    height: 482px;
+    background-size: cover;
+  }
+  &_bg2{
+    background-color: rgba($color: $thirdColor, $alpha: .8);
+    height: 482px;
+  }
+  &_people{
+    width: 128px;
+    height: 128px;
+  }
+  &_btn{
+    padding: 10px 38px;
+  }
+}
+
+// pad(992)
+@include pad{
+  .container{
+    max-width: 940px;
+  }
+}
+
+// mobile(768)
+@include mobile{
+  .container{
+    max-width: 100%;
+    .back_bg2{
+      width: 100%;
+    }
+    .back{
+      padding: 24px 0 0 0;
+    }
+  }
+}
+/*----------------------------------------*/

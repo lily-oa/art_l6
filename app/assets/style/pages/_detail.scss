@@ -1,0 +1,75 @@
+// detail 明細
+.detail{
+  padding: 60px 0 40px 0;
+  &_picBox {
+    height: 256px;
+  }
+  &_date{
+    position: absolute;
+    top: 53px;
+    right: 26px;
+  }
+  &_dateData {
+    color: white;
+    font-size: $h5-font-size;
+  }
+  .buy_box{
+    height: 256px;
+  }
+}
+.site{
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.ticket_hover{
+  &:hover{
+    color: $secondary !important;
+  }
+}
+.hr{
+  border-left: 1px solid $wordColor_1;
+}
+
+// pad(992)
+@include pad{
+  .container{
+    max-width: 940px;
+  }
+}
+
+// mobile(768)
+@include mobile{
+  .container{
+    max-width: 100%;
+  }
+  .detail .buy_box{
+    height: auto;
+  }
+  .detail_date{
+    position: absolute;
+    bottom: -32px;
+    right: 0;
+    .detail_dateData{
+      color: #000;
+    }
+  }
+}
+
+/*-----------------------------*/
+//present 介紹
+//pad(992)
+@include pad{
+  .container{
+    max-width: 940px;
+  }
+}
+
+// mobile(768)
+@include mobile{
+  .container{
+    max-width: 100%;
+  }
+}
+.text-indent{
+  text-indent: 32px;
+}

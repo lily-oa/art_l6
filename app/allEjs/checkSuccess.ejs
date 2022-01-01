@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%- title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/style/bootstrap.css">
+    <!--Noto Sans CJK TC 字體引入-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!--icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--icon-->
+    <script src="https://kit.fontawesome.com/ae90d4fd10.js" crossorigin="anonymous"></script>
+    <!--swiper-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!--adobe字體-->
+    <link rel="stylesheet" href="https://use.typekit.net/qzw0yzm.css">
+    <!--內部-->
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+<body>
+  <%- include('../components/navbar.ejs') %>
+  <%- include('../components/buySidebar.ejs') %>
+  <%- include('../components/nav-scroller.ejs') %>
+  <%- contents %>
+  <%- include('../components/footer.ejs') %>
+  
+  <!--swiper-->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

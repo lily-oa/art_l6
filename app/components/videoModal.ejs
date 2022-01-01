@@ -1,0 +1,97 @@
+<!--直播回顧 Modal-->
+
+<div 
+  class="modal fade" 
+  id="videoModal" 
+  tabindex="-1" 
+  aria-labelledby="videoModalLabel" 
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div 
+      class="videoModal__content modal-content rounded-3 border-3 border-bottom-0 border-start-0 border-end-0 border-secondary">
+      <div class="modal-header">
+        <h5 
+          class="modal-title fs-3 text-primary" 
+          id="videoModalLabel"
+        >
+          直播回顧
+        </h5>
+        <button 
+          type="button" 
+          class="btn-close" 
+          data-bs-dismiss="modal" 
+          aria-label="Close"
+        >
+      </button>
+      </div>  
+      <div class="modal-body">
+        <div 
+          class="carousel slide"
+          id="carouselExampleControls"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <!--1-->
+                <iframe
+                  width="100%"
+                  height="400"
+                  src="https://www.youtube.com/embed/TXQcLsqUTqs" 
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+            </div>
+            <div class="carousel-item">
+              <!--2-->
+              <iframe 
+              width="100%"
+              height="400"
+              src="https://www.youtube.com/embed/1ZkDPqgwZts" 
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              >
+              </iframe>
+            </div>
+            <div class="carousel-item">
+              <!--3-->
+              <iframe 
+              width="100%"
+              height="400"
+              src="https://www.youtube.com/embed/r_PgrPKUjcA" 
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              >
+              </iframe>
+            </div>  
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+          <span class="carousel-control-prev-icon" arial-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+          <span class="carousel-control-next-icon" arial-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,31 @@
-@import './layout/_index.scss';
+@import "helpers/bootstrap.scss";
+/*-- setting --*/
+@import "setting/util";
+@import "setting/mixin";
+/*-- config--*/
+@import "config/base.scss";
+/*-- layout --*/
+@import "layout/subscribe"; //重覆區塊
+@import "layout/footer";
+@import "layout/buySidebar";
+/*-- components --*/
+@import "components/banner-index";
+@import "components/timeLine"; //重覆區塊
+@import "components/navbar";
+@import "components/nav-scroller";
+@import "components/swiper";
+@import "components/loading";
+@import "components/videoModal";
+@import "components/card";
+@import "components/designImg"; // 圖片置中對齊 design.html用
+@import "components/form"; // 表單驗證
+
+
+/*-- pages --*/
+@import "pages/index";
+@import "pages/design";
+@import "pages/detail";
+/*-- check --*/
+@import "check/checkOrder";
+@import "check/checkInfo";
+@import "check/checkPayment";

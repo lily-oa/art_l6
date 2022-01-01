@@ -1,0 +1,46 @@
+/*  全域  */
+body {
+  // font-family: "Roboto","Noto Sans SC", sans-serif;
+  font-family: trilby, serif;
+  line-height: 1.5;
+  overflow-x: hidden; /* 確保AOS套件在RWD不會出現X軸 */
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle !important;
+}
+
+a{
+  display: block;
+  text-decoration: none;
+}
+
+ul ,li {
+  list-style: none;
+  margin-right: 0;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+p{
+  margin-bottom: 0;
+}

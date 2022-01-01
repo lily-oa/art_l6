@@ -1,0 +1,25 @@
+//補上蓋
+.checkOrder_topLine{
+  border-top: 1px solid $wordColor_1;
+}
+
+.checkCard_wrapper {
+  min-height: 0;
+}
+@include media-breakpoint-up(lg) {
+  .checkCard_wrap{
+    min-height: 600px;
+  }
+}
+
+@include mobile{
+  .checkCard_item {
+    font-size: $h4-font-size!important;
+  }
+}
+
+@include mobile-s{
+  .checkCard_item {
+    font-size: $h6-font-size!important;
+  }
+}

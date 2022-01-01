@@ -1,0 +1,16 @@
+//navbar
+@include media-breakpoint-up(lg) {
+  .position-lg-absolute{
+    position: absolute;
+  }
+  .translate-lg-middle{
+    transform: translate(-50%, -50%);
+  }
+}
+
+//hover
+.nav_hover{
+  &:hover{
+    color: $bgColor_2!important;
+  }
+}

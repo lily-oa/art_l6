@@ -1,0 +1,28 @@
+/*-- banner --*/
+.banner {
+  height: 480px;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  &_btn {
+    width: 20%!important;
+  }
+}
+
+// pad
+@include pad{
+  .container {
+    max-width: 940px;
+  }
+}
+
+// mobile
+@include mobile-m{
+  .container{
+    min-width: 100%;
+  }
+  .banner_btn{
+    width: 50% !important;
+  }
+}
+/*----------------------------------------*/

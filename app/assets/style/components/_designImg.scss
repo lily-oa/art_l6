@@ -1,0 +1,13 @@
+// 圖片垂直置中對齊 design.html 和其它頁面圖片用
+
+.img-position-center {
+  position: relative;
+  overflow: hidden;
+  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+}

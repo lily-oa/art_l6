@@ -1,0 +1,28 @@
+// subscribe  下方banner
+.subscribe_bgPic{
+  background-image: url('https://github.com/hexschool/webLayoutTraining1st/blob/master/exhibition-week6/wladislaw-peljuchno-Y_f1aHpR1tc-unsplash.jpg?raw=true');
+  height: 400px;
+}
+.subscribe_title{
+  line-height: 1.5;
+}
+.subscribe_mail{
+  width: 350px;
+}
+.subscribe_btn{
+  background: $secondary;
+  &:hover{
+      background: $primary;
+    }
+  .subscribe_link{
+    padding: 8px 40px;
+    
+  }
+}
+
+// pad
+@include pad{
+  .container{
+    max-width: 940px;
+  }
+}

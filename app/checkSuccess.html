@@ -1,0 +1,41 @@
+---
+title: checkSuccess.html 完成頁面
+layout: ./app/allEjs/checkSuccess.ejs
+engine: ejs
+current: checkSuccess
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6 mx-auto">
+      <div class="text-center text-primary mt-14 mt-lg-18 mb-4">
+        <span class="material-icons display-1 mb-8">check_circle_outline</span>
+        <p class="fs-5">完成訂購</p>
+      </div>
+      <p class="mb-13 ">您的展覽憑證代碼為：</p>
+      <p class="text-primary fs-4 mb-14 mb-lg-5 text-center">qr147352</p>
+      <p class="mb-15 mb-lg-19">恭喜您已完成「2020 台味設計展」的購票手續，請於 2020/06/01 ~ 2020/10/31 於展覽入口頁面輸入「展覽憑證代碼」，經驗證無誤即可瀏覽。</p>
+      <!--pc按鈕-->
+      <ul class="row d-flex justify-content-between">
+        <li class="col-6">
+          <a href="./index.html" class="btn btn-outline-secondary btn-lg d-none d-lg-block">繼續瀏覽</a>
+        </li>
+        <li class="col-6">
+          <a href="./design.html" class="btn btn-secondary btn-lg text-white w-100 d-none d-lg-block hover_full">看展去</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!--手機版 checkOrder_footer-->
+<div class="container d-block d-lg-none">
+  <div class="row">
+    <div class="col-6">
+      <a href="./index.html" class="btn btn-outline-primary btn-lg-lg w-100 py-8">繼續瀏覽</a>
+    </div>
+    <div class="col-6">
+      <a href="./design.html" class="btn btn-secondary w-100 py-8 text-white">看展去</a>
+    </div>
+  </div>
+</div>

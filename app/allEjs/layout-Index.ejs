@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%- title %></title>
+    <link rel="icon" type="image/png" href="./assets/images/my.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/style/bootstrap.css">
+    <!--Noto Sans CJK TC 字體引入-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!--icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--icon-->
+    <script src="https://kit.fontawesome.com/ae90d4fd10.js" crossorigin="anonymous"></script>
+    <!--swiper-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!--adobe字體-->
+    <link rel="stylesheet" href="https://use.typekit.net/qzw0yzm.css">
+    <!--aos.css動畫-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--icon-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <!--loader.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/loaders.css/0.1.2/loaders.css">
+
+    <!--內部-->
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+<body>
+  <nav 
+    class="navbar navbar-expand-lg navbar-light border border-dark bg-white
+            z-index-9998
+            w-100
+            border-bottom
+            border-end-0
+            border-start-0
+            border-top-0
+            position-fixed
+            "
+    >
+  <%- include('../components/navbar.ejs') %>
+  </nav>
+  <%- include('../components/buySidebar.ejs') %>
+  <!--返迴鈕-->
+  <%- include('../components/toUpBtn.ejs') %>
+  <%- include('../components/banner-index.ejs') %>
+  <%- include('../components/nav-scroller.ejs') %>
+  <%- contents %>
+  <%- include('../components/swiper.ejs') %>
+  <%- include('../components/subscribe.ejs') %>
+  <%- include('../components/footer.ejs') %>
+  <%- include('./modal.ejs') %>
+
+  <!--swiper-->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!--aos.css動畫-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!--sweetalert2 彈跳訊息套件-->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+  
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+</html>
