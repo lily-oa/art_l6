@@ -11,9 +11,9 @@ $(function(){
 
   resetForm();
   checkSubscriptionValue();
-
-
 });
+
+
 /*---------------------------------------------- */
 
 
