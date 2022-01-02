@@ -1,6 +1,6 @@
 "use strict";
 
-//動畫
+//動畫及表單驗證
 AOS.init();
 $(function () {
   AOS.init({
