@@ -44,8 +44,6 @@ function validationEmail(dom = '.js-user-email') {
 }
 
 
-
-
 function validationAllInputsFn(data) {
   const { inputs, rule, msg } = data;
 
@@ -126,7 +124,7 @@ function checkUserName(obj) {
   }
 }
 
-
+//----------------------------------------------------  
 $('.js-form-check').on('change', function() {
   const formInputs = document.querySelectorAll('.js-form-input');
   checkFormValue(formInputs);
@@ -155,9 +153,7 @@ function checkFormValue(inputs) {
   }
 };
 
-
-
-
+//----------------------------------------------------  
 
 $('.js-subscription-input').on('input propertychange', function() {
   const borderStyle = ['border-danger', 'border-2', 'animate__animated', 'animate__headShake'];
