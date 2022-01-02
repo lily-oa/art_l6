@@ -284,7 +284,8 @@ function checkUserName(obj) {
     input.removeClass(borderStyle);
     $(errorMsg).removeClass('d-block');
   }
-}
+} //----------------------------------------------------  
+
 
 $('.js-form-check').on('change', function () {
   var formInputs = document.querySelectorAll('.js-form-input');
@@ -311,7 +312,8 @@ function checkFormValue(inputs) {
   }
 }
 
-;
+; //----------------------------------------------------  
+
 $('.js-subscription-input').on('input propertychange', function () {
   var borderStyle = ['border-danger', 'border-2', 'animate__animated', 'animate__headShake'];
   var inputValue = $(this).val();
