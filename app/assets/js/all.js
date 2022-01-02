@@ -1,5 +1,4 @@
-//動畫
-
+//動畫及表單驗證
 AOS.init();
 $(function(){
   AOS.init({
@@ -13,10 +12,7 @@ $(function(){
   checkSubscriptionValue();
 });
 
-
 /*---------------------------------------------- */
-
-
 // loader-inner
 $(function () {
   $('html, body').animate({
@@ -163,4 +159,3 @@ function addTicket(showName = '展覽') {
 
 
 /*---------------------------------------------- */
-
