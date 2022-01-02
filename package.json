@@ -48,9 +48,3 @@
     "sweetalert2": "^11.3.2"
   }
 }
-{
-  ...other package.json stuff...,
-  "resolutions": {
-    "gift": "^0.10.2"
-  }
-}
