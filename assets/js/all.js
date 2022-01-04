@@ -1,5 +1,10 @@
 "use strict";
 
+$(function () {
+  console.log('Hello Bootstrap5');
+});
+"use strict";
+
 //動畫及表單驗證
 AOS.init();
 $(function () {
@@ -13,7 +18,6 @@ $(function () {
     once: true
   });
   resetForm();
-  checkSubscriptionValue();
 });
 /*---------------------------------------------- */
 // loader-inner
@@ -176,13 +180,6 @@ function resetForm() {
 
 function validationForm() {
   validationEmail();
-  validationPassword();
-  validationUserName();
-  validationPhone();
-  validationCreditCardNumber();
-  validationCreditCardDate();
-  validationCreditCardDate();
-  validationCreditCardPassword();
 } //信箱驗證
 
 
@@ -254,96 +251,5 @@ function checkInputDate(obj) {
     input.removeClass(borderStyle);
     $(errorMsg).removeClass('d-block');
   }
-} //----------------------------------------------------  
-
-
-function checkUserName(obj) {
-  var borderStyle = ['border-danger', 'animate__animated', 'animate__headShake'];
-  var input = obj.input,
-      inputValue = obj.inputValue,
-      rule = obj.rule,
-      symbolRule = obj.symbolRule,
-      errorName = obj.errorName;
-  var errorMsg = $(input).next();
-
-  if (!rule.test(inputValue)) {
-    input.addClass(borderStyle);
-    $(errorMsg).addClass('d-block');
-
-    if (symbolRule.test(inputValue)) {
-      console.log(symbolRule.test(inputValue));
-      $(errorMsg).text("".concat(errorName, "\u4E0D\u5F97\u542B\u7279\u6B8A\u7B26\u865F\u6216\u6578\u5B57"));
-    } else if (inputValue === '') {
-      $(errorMsg).text("".concat(errorName, "\u70BA\u5FC5\u586B"));
-    } else if (inputValue.length <= 1) {
-      input.addClass(borderStyle);
-      $(errorMsg).addClass('d-block');
-      $(errorMsg).text("".concat(errorName, "\u9808\u8D85\u904E\u5169\u500B\u5B57\u4EE5\u4E0A"));
-    }
-  } else {
-    input.removeClass(borderStyle);
-    $(errorMsg).removeClass('d-block');
-  }
-} //----------------------------------------------------  
-
-
-$('.js-form-check').on('change', function () {
-  var formInputs = document.querySelectorAll('.js-form-input');
-  checkFormValue(formInputs);
-});
-$('.js-modal-login-check').on('change', function () {
-  var formInputs = document.querySelectorAll('.js-modal-login-input');
-  checkFormValue(formInputs);
-});
-
-function checkFormValue(inputs) {
-  var submitBtn = $('.js-form-submit-btn');
-  var inputValueTrue = 0;
-  inputs.forEach(function (input) {
-    if (input.value !== '') {
-      inputValueTrue += 1;
-    }
-  });
-
-  if (inputValueTrue === inputs.length) {
-    $(submitBtn).siblings('.disabled-style').addClass('d-none');
-  } else {
-    $(submitBtn).siblings('.disabled-style').removeClass('d-none');
-  }
-}
-
-; //----------------------------------------------------  
-
-$('.js-subscription-input').on('input propertychange', function () {
-  var borderStyle = ['border-danger', 'border-2', 'animate__animated', 'animate__headShake'];
-  var inputValue = $(this).val();
-  var rule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
-  var errorName = $(this).attr('name');
-  var errorMsg = $('.js-subscription-msg');
-  var errorCustomMsg = "".concat(errorName, " \u683C\u5F0F\u932F\u8AA4");
-
-  if (inputValue === '') {
-    $(this).removeClass(borderStyle);
-    $(errorMsg).removeClass('d-block');
-    $('.js-subscription-btn').prop('disabled', true);
-  } else if (!rule.test(inputValue)) {
-    $(this).addClass(borderStyle);
-    $(errorMsg).addClass('d-block');
-    $(errorMsg).text(errorCustomMsg);
-    $('.js-subscription-btn').prop('disabled', true);
-  } else {
-    $(this).removeClass(borderStyle);
-    $(errorMsg).removeClass('d-block');
-    $('.js-subscription-btn').prop('disabled', false);
-  }
-});
-
-function checkSubscriptionValue() {
-  var errorMsg = $('.js-subscription-msg');
-
-  if ($('.js-subscription-input').val() === '') {
-    $('.js-subscription-btn').prop('disabled', true);
-    $(errorMsg).removeClass('d-block');
-  }
-}
+} //----------------------------------------------------
 //# sourceMappingURL=all.js.map
