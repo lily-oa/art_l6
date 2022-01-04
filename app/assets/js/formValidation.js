@@ -23,14 +23,7 @@ function resetForm() {
 
 function validationForm() {
   validationEmail();
-  validationPassword();
-  validationUserName();
-  validationPhone();
-
-  validationCreditCardNumber();
-  validationCreditCardDate();
-  validationCreditCardDate();
-  validationCreditCardPassword();
+  
 }
 
 //信箱驗證
@@ -99,93 +92,3 @@ function checkInputDate(obj) {
 
 
 //----------------------------------------------------  
-
-function checkUserName(obj) {
-  const borderStyle = ['border-danger', 'animate__animated', 'animate__headShake'];
-  const { input, inputValue, rule, symbolRule, errorName } = obj;
-  const errorMsg = $(input).next();
-
-  if (!rule.test(inputValue)) {
-    input.addClass(borderStyle);
-    $(errorMsg).addClass('d-block');
-    if(symbolRule.test(inputValue)) {
-      console.log(symbolRule.test(inputValue));
-      $(errorMsg).text(`${errorName}不得含特殊符號或數字`);
-    } else if(inputValue === '') {
-      $(errorMsg).text(`${errorName}為必填`);
-    } else if (inputValue.length <= 1) {
-      input.addClass(borderStyle);
-      $(errorMsg).addClass('d-block');
-      $(errorMsg).text(`${errorName}須超過兩個字以上`);
-    }
-  } else {
-    input.removeClass(borderStyle);
-    $(errorMsg).removeClass('d-block');
-  }
-}
-
-//----------------------------------------------------  
-$('.js-form-check').on('change', function() {
-  const formInputs = document.querySelectorAll('.js-form-input');
-  checkFormValue(formInputs);
-});
-
-$('.js-modal-login-check').on('change', function() {
-  const formInputs = document.querySelectorAll('.js-modal-login-input');
-  checkFormValue(formInputs);
-});
-
-
-function checkFormValue(inputs) {
-  const submitBtn = $('.js-form-submit-btn');
-  let inputValueTrue = 0;
-
-  inputs.forEach(function(input) {
-    if (input.value !== '') {
-      inputValueTrue += 1;
-    }
-  });
-
-  if (inputValueTrue === inputs.length) {
-    $(submitBtn).siblings('.disabled-style').addClass('d-none');
-  } else {
-    $(submitBtn).siblings('.disabled-style').removeClass('d-none');
-  }
-};
-
-//----------------------------------------------------  
-
-$('.js-subscription-input').on('input propertychange', function() {
-  const borderStyle = ['border-danger', 'border-2', 'animate__animated', 'animate__headShake'];
-  const inputValue = $(this).val();
-  const rule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
-  const errorName =  $(this).attr('name');
-  const errorMsg = $('.js-subscription-msg');
-  const errorCustomMsg = `${errorName} 格式錯誤`;
-
-  if (inputValue === '') {
-    $(this).removeClass(borderStyle);
-    $(errorMsg).removeClass('d-block');
-    $('.js-subscription-btn').prop('disabled', true);
-
-  } else if(!rule.test(inputValue)) {
-    $(this).addClass(borderStyle);
-    $(errorMsg).addClass('d-block');
-    $(errorMsg).text(errorCustomMsg);
-    $('.js-subscription-btn').prop('disabled', true);
-
-  } else {
-    $(this).removeClass(borderStyle);
-    $(errorMsg).removeClass('d-block');
-    $('.js-subscription-btn').prop('disabled', false);
-  }
-});
-
-function checkSubscriptionValue() {
-  const errorMsg = $('.js-subscription-msg');
-
-  if($('.js-subscription-input').val() === '') {
-    $('.js-subscription-btn').prop('disabled', true);
-    $(errorMsg).removeClass('d-block');
-  }
-}

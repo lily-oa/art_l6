@@ -9,7 +9,7 @@ $(function(){
   });
 
   resetForm();
-  checkSubscriptionValue();
+  
 });
 
 /*---------------------------------------------- */
