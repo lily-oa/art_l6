@@ -81,7 +81,7 @@
           aria-current="page" 
           href="#"
           data-bs-toggle="modal"
-          data-bs-target="#loginModal"
+          data-bs-target=".js-sign-in-modal"
         >
           Sign in
         </a>
@@ -92,7 +92,7 @@
           class="nav-link border__bottom__hover px-16 my-2" 
           href="#"
           data-bs-toggle="modal"
-          data-bs-target="#registerModal"
+          data-bs-target=".js-sign-up-modal"
         >
           Sign up
         </a>
@@ -710,7 +710,7 @@
           href="#" 
           class="footer_item text-wordColor_1 my-7"
           data-bs-toggle="modal"
-          data-bs-target="#loginModal"
+          data-bs-target=".js-sign-in-modal"
         >
           Sign in
         </a>
@@ -719,7 +719,7 @@
           href="#" 
           class="footer_item text-wordColor_1 my-7 ms-4"
           data-bs-toggle="modal"
-          data-bs-target="#registerModal"
+          data-bs-target=".js-sign-up-modal"
         >
           Sign up
         </a>
@@ -729,8 +729,7 @@
 </footer>
   <!-- 登入 Modal -->
 <div 
-  class="modal fade z-index-10000" 
-  id="loginModal" 
+  class="modal fade z-index-10000 js-sign-in-modal" 
   tabindex="-1" 
   aria-labelledby="loginModalLabel" 
   aria-hidden="true"
@@ -836,7 +835,7 @@
               data-bs-target="#registerModal"
               data-bs-toggle="modal"
               data-bs-dismiss="modal"
-              class="link-primary useHover_1 registerModal-btn"
+              class="link-primary useHover_1 js-sign-up-modal-btn"
             >
               註冊一個帳號
             </a>
@@ -849,8 +848,7 @@
 
 <!-- 註冊 Modal -->
 <div 
-  class="modal fade z-index-10000" 
-  id="registerModal" 
+  class="modal fade z-index-10000 js-sign-up-modal" 
   tabindex="-1" 
   aria-labelledby="registerModalLabel" 
   aria-hidden="true"
@@ -865,7 +863,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form class="registerModal-check">
+        <form class="js-modal-sign-up-check">
           <ul class="mb-10">
             <li class="mb-10">
               <label for="userEmail" class="form-label mb-2">
@@ -929,7 +927,17 @@
             <h3 class="modal-title fs-11 fw-bolder">已有帳號？</h3>
           </li>
           <li>
-            <a href="#" type="button" class="btn btn-outline-primary w-100 rounded-pill loginModal-btn">前往登入</a>
+            <a 
+              href="#" 
+              type="button" 
+              class="
+                      btn btn-outline-primary 
+                      w-100 rounded-pill 
+                      js-sign-in-modal-btn
+                    "
+            >
+              前往登入
+            </a>
           </li>
         </ul>
       </div>

@@ -41,9 +41,9 @@ $('.searchPassword-check').on('submit', function (event) {
   });
 }); // 按下"前往登入"按鈕後
 
-$('.loginModal-btn').on('click', function () {
-  registerModal.hide();
-  loginModal.show();
+$('.js-sign-in-modal-btn').on('click', function () {
+  signInModal.show();
+  signUpModal.hide();
 }); // detail.html 按下"收藏展覽"按鈕後
 
 $('.js-collert-btn').on('click', function () {
@@ -218,23 +218,29 @@ function checkInputDate(obj) {
 "use strict";
 
 // sweetalert 設定值 modal.js
-var loginModal = new bootstrap.Modal($('#loginModal'));
-var registerModal = new bootstrap.Modal($('#registerModal'));
+var signInModal = new bootstrap.Modal($('.js-sign-in-modal'));
+var signUpModal = new bootstrap.Modal($('.js-sign-up-modal'));
 var forgotPasswordModal = new bootstrap.Modal($('#forgotPasswordModal'));
 resetForm();
 validationForm();
-$('.forgotPasswordModal-btn').on('click', function () {
-  loginModal.hide();
-  forgotPasswordModal.show();
+$('.js-sign-in-modal-btn').on('click', function () {
+  resetForm();
+  signInModal.show();
+  signUpModal.hide();
 });
-$('.registerModal-btn').on('click', function () {
-  loginModal.hide();
-  registerModal.show();
+$('.js-sign-up-modal-btn').on('click', function () {
+  resetForm();
+  signInModal.hide();
+  signUpModal.show();
+});
+$('.forgotPasswordModal-btn').on('click', function () {
+  signInModal.hide();
+  forgotPasswordModal.show();
 }); //登入成功訊息
 
-$('.loginModal-check').on('submit', function (event) {
+$('.js-modal-login-check').on('submit', function (event) {
   event.preventDefault();
-  loginModal.hide();
+  signInModal.hide();
   swal.fire({
     icon: 'success',
     title: '登入成功',
@@ -242,9 +248,9 @@ $('.loginModal-check').on('submit', function (event) {
   });
 }); //註冊一個帳號成功訊息
 
-$('.registerModal-check').on('submit', function (event) {
+$('.js-modal-sign-up-check').on('submit', function (event) {
   event.preventDefault();
-  registerModal.hide();
+  signUpModal.hide();
   swal.fire({
     icon: 'success',
     title: '註冊成功',
