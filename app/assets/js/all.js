@@ -27,17 +27,6 @@ $(function () {
 });
 
 /*---------------------------------------------- */
-// 重設密碼連結寄出訊息
-$('.searchPassword-check').on('submit', function(event){
-  event.preventDefault();
-  forgotPasswordModal.hide();
-  swal.fire({
-    icon: 'success',
-    title: '重設密碼連結已寄出',
-    text: '模擬訊息',
-  });
-});
-
 // 按下"前往登入"按鈕後
 $('.js-sign-in-modal-btn').on('click', () => {
   signInModal.show();

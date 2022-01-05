@@ -44,3 +44,14 @@ $('.js-modal-sign-up-check').on('submit', function(event){
     text: '模擬訊息',
   });
 });
+
+// 重設密碼連結寄出訊息
+$('.searchPassword-check').on('submit', function(event){
+  event.preventDefault();
+  forgotPasswordModal.hide();
+  swal.fire({
+    icon: 'success',
+    title: '重設密碼連結已寄出',
+    text: '模擬訊息',
+  });
+});
