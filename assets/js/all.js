@@ -224,6 +224,7 @@ $('.js-sign-up-modal-btn').on('click', function () {
   signUpModal.show();
 });
 $('.forgotPasswordModal-btn').on('click', function () {
+  resetForm();
   signInModal.hide();
   forgotPasswordModal.show();
 }); //登入成功訊息
