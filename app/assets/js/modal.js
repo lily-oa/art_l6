@@ -1,25 +1,32 @@
 // sweetalert 設定值 modal.js
 
-const loginModal = new bootstrap.Modal($('#loginModal'));
-const registerModal = new bootstrap.Modal($('#registerModal'));
+const signInModal = new bootstrap.Modal($('.js-sign-in-modal'));
+const signUpModal = new bootstrap.Modal($('.js-sign-up-modal'));
 const forgotPasswordModal = new bootstrap.Modal($('#forgotPasswordModal'));
 resetForm();
 validationForm();
 
+$('.js-sign-in-modal-btn').on('click', () => {
+  resetForm();
+  signInModal.show();
+  signUpModal.hide();
+});
+
+$('.js-sign-up-modal-btn').on('click', () => {
+  resetForm();
+  signInModal.hide();
+  signUpModal.show();
+});
+
 $('.forgotPasswordModal-btn').on('click', () => {
-  loginModal.hide();
+  signInModal.hide();
   forgotPasswordModal.show();
 });
 
-$('.registerModal-btn').on('click', () => {
-  loginModal.hide();
-  registerModal.show();
-});
-
 //登入成功訊息
-$('.loginModal-check').on('submit', function(event){
+$('.js-modal-login-check').on('submit', function(event){
   event.preventDefault();
-  loginModal.hide();
+  signInModal.hide();
   swal.fire({
     icon: 'success',
     title: '登入成功',
@@ -28,9 +35,9 @@ $('.loginModal-check').on('submit', function(event){
 });
 
 //註冊一個帳號成功訊息
-$('.registerModal-check').on('submit', function(event){
+$('.js-modal-sign-up-check').on('submit', function(event){
   event.preventDefault();
-  registerModal.hide();
+  signUpModal.hide();
   swal.fire({
     icon: 'success',
     title: '註冊成功',

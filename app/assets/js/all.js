@@ -39,9 +39,9 @@ $('.searchPassword-check').on('submit', function(event){
 });
 
 // 按下"前往登入"按鈕後
-$('.loginModal-btn').on('click', () => {
-  registerModal.hide();
-  loginModal.show();
+$('.js-sign-in-modal-btn').on('click', () => {
+  signInModal.show();
+  signUpModal.hide();
 });
 
 // detail.html 按下"收藏展覽"按鈕後
@@ -72,7 +72,6 @@ $('.js-add-cart').on('click', function(){
 $('#btnColorChange').on('click', function(){
   $(this).toggleClass('bg-secondary');
 });
-
 
 /*---------------------------------------------- */
 // banner-index.ejs "購買票卷"按鈕買
