@@ -27,20 +27,6 @@ $(function () {
     $('body').css('overflow', 'auto');
     $(".loading").fadeOut(600);
   }, 800);
-}); // sweetalert 設定值 modal.js
-
-var loginModal = new bootstrap.Modal($('#loginModal'));
-var registerModal = new bootstrap.Modal($('#registerModal'));
-var forgotPasswordModal = new bootstrap.Modal($('#forgotPasswordModal'));
-resetForm();
-validationForm();
-$('.forgotPasswordModal-btn').on('click', function () {
-  loginModal.hide();
-  forgotPasswordModal.show();
-});
-$('.registerModal-btn').on('click', function () {
-  loginModal.hide();
-  registerModal.show();
 });
 /*---------------------------------------------- */
 // 重設密碼連結寄出訊息
@@ -51,26 +37,6 @@ $('.searchPassword-check').on('submit', function (event) {
   swal.fire({
     icon: 'success',
     title: '重設密碼連結已寄出',
-    text: '模擬訊息'
-  });
-}); //登入成功訊息
-
-$('.loginModal-check').on('submit', function (event) {
-  event.preventDefault();
-  loginModal.hide();
-  swal.fire({
-    icon: 'success',
-    title: '登入成功',
-    text: '模擬訊息'
-  });
-}); //註冊一個帳號成功訊息
-
-$('.registerModal-check').on('submit', function (event) {
-  event.preventDefault();
-  registerModal.hide();
-  swal.fire({
-    icon: 'success',
-    title: '註冊成功',
     text: '模擬訊息'
   });
 }); // 按下"前往登入"按鈕後
@@ -250,4 +216,39 @@ function checkInputDate(obj) {
   }
 } //----------------------------------------------------
 "use strict";
+
+// sweetalert 設定值 modal.js
+var loginModal = new bootstrap.Modal($('#loginModal'));
+var registerModal = new bootstrap.Modal($('#registerModal'));
+var forgotPasswordModal = new bootstrap.Modal($('#forgotPasswordModal'));
+resetForm();
+validationForm();
+$('.forgotPasswordModal-btn').on('click', function () {
+  loginModal.hide();
+  forgotPasswordModal.show();
+});
+$('.registerModal-btn').on('click', function () {
+  loginModal.hide();
+  registerModal.show();
+}); //登入成功訊息
+
+$('.loginModal-check').on('submit', function (event) {
+  event.preventDefault();
+  loginModal.hide();
+  swal.fire({
+    icon: 'success',
+    title: '登入成功',
+    text: '模擬訊息'
+  });
+}); //註冊一個帳號成功訊息
+
+$('.registerModal-check').on('submit', function (event) {
+  event.preventDefault();
+  registerModal.hide();
+  swal.fire({
+    icon: 'success',
+    title: '註冊成功',
+    text: '模擬訊息'
+  });
+});
 //# sourceMappingURL=all.js.map
