@@ -29,17 +29,7 @@ $(function () {
   }, 800);
 });
 /*---------------------------------------------- */
-// 重設密碼連結寄出訊息
-
-$('.searchPassword-check').on('submit', function (event) {
-  event.preventDefault();
-  forgotPasswordModal.hide();
-  swal.fire({
-    icon: 'success',
-    title: '重設密碼連結已寄出',
-    text: '模擬訊息'
-  });
-}); // 按下"前往登入"按鈕後
+// 按下"前往登入"按鈕後
 
 $('.js-sign-in-modal-btn').on('click', function () {
   signInModal.show();
@@ -254,6 +244,16 @@ $('.js-modal-sign-up-check').on('submit', function (event) {
   swal.fire({
     icon: 'success',
     title: '註冊成功',
+    text: '模擬訊息'
+  });
+}); // 重設密碼連結寄出訊息
+
+$('.searchPassword-check').on('submit', function (event) {
+  event.preventDefault();
+  forgotPasswordModal.hide();
+  swal.fire({
+    icon: 'success',
+    title: '重設密碼連結已寄出',
     text: '模擬訊息'
   });
 });
