@@ -1,10 +1,5 @@
 "use strict";
 
-$(function () {
-  console.log('Hello Bootstrap5');
-});
-"use strict";
-
 //動畫及表單驗證
 AOS.init();
 $(function () {
@@ -32,11 +27,13 @@ $(function () {
     $('body').css('overflow', 'auto');
     $(".loading").fadeOut(600);
   }, 800);
-}); // sweetalert 設定值
+}); // sweetalert 設定值 modal.js
 
 var loginModal = new bootstrap.Modal($('#loginModal'));
 var registerModal = new bootstrap.Modal($('#registerModal'));
 var forgotPasswordModal = new bootstrap.Modal($('#forgotPasswordModal'));
+resetForm();
+validationForm();
 $('.forgotPasswordModal-btn').on('click', function () {
   loginModal.hide();
   forgotPasswordModal.show();

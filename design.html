@@ -756,7 +756,13 @@
       <div class="modal-body">
         <form class="js-modal-login-check">
           <div class="mb-3">
-            <label for="loginEmail" class="form-label fs-5">帳號</label>
+            <label 
+              for="loginEmail" 
+              class="form-label fs-5"
+              required
+            >
+              帳號
+            </label>
             <input 
               type="email"
               name="Email"
@@ -769,7 +775,11 @@
             >
             <!--信箱驗證-->
             <p 
-              class="js-validate-msg validate-msg fs-8 text-danger text-end pt-2 my-2"
+              class="
+                      js-validate-msg validate-msg
+                      fs-10 text-danger text-end 
+                      pt-2
+                    "
             >
             </p>
           </div>
@@ -797,8 +807,11 @@
           <button
             type="submit"
             data-bs-dismiss="modal"
-            class="btn btn-secondary btn-lg my-3 rounded-pill w-100"
-            
+            class="
+                    btn btn-secondary
+                    btn-lg my-3 rounded-pill w-100 
+                    js-form-submit-btn js-login-btn
+                  "
           >
             登入
           </button>
