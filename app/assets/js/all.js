@@ -26,10 +26,12 @@ $(function () {
   }, 800);
 });
 
-// sweetalert 設定值
+// sweetalert 設定值 modal.js
 const loginModal = new bootstrap.Modal($('#loginModal'));
 const registerModal = new bootstrap.Modal($('#registerModal'));
 const forgotPasswordModal = new bootstrap.Modal($('#forgotPasswordModal'));
+resetForm();
+validationForm();
 
 $('.forgotPasswordModal-btn').on('click', () => {
   loginModal.hide();
