@@ -133,6 +133,7 @@ function resetForm() {
 
 function validationForm() {
   validationEmail();
+  validationPassword();
 } //信箱驗證
 
 
@@ -144,7 +145,18 @@ function validationEmail() {
     msg: '格式錯誤'
   };
   validationAllInputsFn(data);
-}
+} //密碼驗證
+
+
+function validationPassword() {
+  var data = {
+    inputs: document.querySelectorAll('.js-user-password'),
+    rule: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*?&]{1})[A-Za-z\d@#$!%*?&]{8,}$/,
+    msg: '須 8 碼以上含大、小寫英文、數字和特殊符號'
+  };
+  validationAllInputsFn(data);
+} //
+
 
 function validationAllInputsFn(data) {
   var inputs = data.inputs,
