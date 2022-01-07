@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>設計類 - 購票介紹 - detail.html</title>
+    <link rel="icon" type="image/png" href="./assets/images/my.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/style/bootstrap.css">
+    <!--Noto Sans CJK TC 字體引入-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!--icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--icon-->
+    <script src="https://kit.fontawesome.com/ae90d4fd10.js" crossorigin="anonymous"></script>
+    <!--swiper-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!--adobe字體-->
+    <link rel="stylesheet" href="https://use.typekit.net/qzw0yzm.css">
+    <!--aos.css動畫-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--loader.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/loaders.css/0.1.2/loaders.css">
+    <!--內部-->
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+<body>
+  <nav 
+    class="navbar navbar-expand-lg navbar-light border border-dark bg-white
+            z-index-9999
+            w-100
+            border-bottom-wordColor_1
+            border-end-0
+            border-start-0
+            border-top-0
+            position-sticky
+            " 
+    >
+  <!--navbar-->
+
+<div class="container-fluid w-100">
+  <!--漢堡選單-->
+  <button 
+    class="navbar-toggler" 
+    type="button" 
+    data-bs-toggle="collapse" 
+    data-bs-target="#navbarSupportedContent" 
+    aria-controls="navbarSupportedContent" 
+    aria-expanded="false" 
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!--logo-->
+  <a 
+    href="./index.html" 
+    class="fs-4 navbar-brand text-primary position-lg-absolute top-50 start-50 translate-lg-middle"
+  >
+    EXHIBINECTION
+  </a>
+  <!--icon-->
+  <!--右邊出現的畫布(offcanvas) -->
+  <a 
+    href="#" 
+    class="nav-link position-relative link-black order-lg-3" 
+    data-bs-toggle="offcanvas"  
+    data-bs-target="#offcanvasRight" 
+    aria-controls="offcanvasRight"
+  >
+    <span class="material-icons">confirmation_number</span>
+    <span class="position-absolute translate-middle rounded-circle bg-secondary text-white px-2">3</span>
+  </a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mb-2 mb-lg-0 w-100 d-flex justify-content-md-end align-items-center">
+      <li class="nav-item nav_hover">
+        <!--埋入 sing in (登入)燈箱關鍵-->
+        <a 
+          class="nav-link border__bottom__hover px-16 my-2" 
+          aria-current="page" 
+          href="#"
+          data-bs-toggle="modal"
+          data-bs-target=".js-sign-in-modal"
+        >
+          Sign in
+        </a>
+      </li>
+      <li class="nav-item nav_hover">
+        <!--埋入 sing up (註冊)燈箱關鍵-->
+        <a 
+          class="nav-link border__bottom__hover px-16 my-2" 
+          href="#"
+          data-bs-toggle="modal"
+          data-bs-target=".js-sign-up-modal"
+        >
+          Sign up
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+  </nav>
+  
+  <nav
+    class="h-x0.53 top-0
+            overflow-y-hidden
+            border-bottom-wordColor_1
+            z-index-9999
+            position-sticky
+            bg-white
+          "   
+  >
+  <!--nav-scroller 可以捲動的導覽列-->
+<div class="nav-scroller">
+  <div 
+    class="container-fluid border border-bottom-wordColor_1 h-x0.53" 
+    aria-label="Secondary navigation"
+  >
+    <nav class="nav justify-content-sm-center py-1">
+      <a class="navbarDown_detail nav-link text-dark py-2 border__bottom__hover" aria-current="page" href="#">音樂</a>
+      <a class="navbarDown_detail nav-link text-dark py-2 border__bottom__hover" href="#">戲劇</a>
+      <a 
+        class="navbarDown_detail nav-link text-dark py-2 border__bottom__hover
+              border__bottom__hover--checked " 
+        href="./design.html"
+      >
+        設計
+      </a>
+      <a class="navbarDown_detail nav-link text-dark py-2 border__bottom__hover" href="#">藝術</a>
+      <a class="navbarDown_detail nav-link text-dark py-2 border__bottom__hover" href="#">美食</a>
+      <a class="navbarDown_detail nav-link text-dark py-2 border__bottom__hover" href="#">旅遊</a>
+      <a class="navbarDown_detail nav-link text-dark py-2 border__bottom__hover" href="#">電影</a>
+      <a class="navbarDown_detail nav-link text-dark py-2 border__bottom__hover" href="#">親子</a>
+      <a class="navbarDown_detail nav-link text-dark py-2 border__bottom__hover" href="#">期間限定</a>
+    </nav>
+  </div>
+</div>
+  </nav>
+
+  <!-----------------------------------------buySidebar-->
+<div class="buySidebar offcanvas offcanvas-end bg-dark z-index-10000" 
+      tabindex="-1" 
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel" 
+      data-bs-scroll="true"
+>
+<div class="offcanvas-header px-4 px-md-3 pt-11 pt-md-6 pb-0 mb-16">
+  <h5 id="offcanvasRightLabel" class="buySidebar_word fs-2 fw-bolder text-white">
+    Cart List
+  </h5>
+  <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close">
+  </button>
+</div>
+<div class="offcanvas-body px-4 px-md-3 py-0 pb-0 scrollbar-primary">
+  <!--1-->
+  <div class="card mb-3 position-relative rounded-1">
+    <a href="javascript:;" class="position-absolute top-0 start-0">
+      <span class="material-icons text-primary">close</span>
+    </a>
+    <div class="row g-0 pt-7 ps-7 pb-4">
+      <div class="col-4">
+        <div class="ratio ratio-1x1 h-100">
+          <img class="object-fit-cover"
+              src="https://github.com/hexschool/webLayoutTraining1st/blob/master/exhibition-week6/alina-grubnyak-R84Oy89aNKs-unsplash.jpg?raw=true"
+              alt="參展照片">
+        </div> 
+      </div>
+      <div class="col-8">
+        <div class="card-body pb-0 pt-0 d-flex justify-content-around align-items-center">
+          <div class="flex-grow-1 d-flex flex-column justify-content-between">
+            <h5 class="card-title mb-1 fs-10 fs-sm-5 fw-bold">2020 台味設計展</h5>
+            <p class="card-text mb-1">01 JUN — 31 OCT</p>
+            <span class="text-wordColor_2 mb-9 d-block">全票</span>
+            <p class="fs-5 fw-bold">NT$350</p>
+          </div>
+          <div class="cardInputList flex-grow-md-1 d-flex align-items-center">
+            <div
+              class=" d-flex flex-column-reverse flex-md-row align-items-center justify-content-around">
+              <div class="lh-0">
+                <a href="#"><span class="material-icons text-wordColor_2 p-0 buySidebar_hover">remove</span></a>
+              </div>
+              <div class="mx-16 mx-md-0">
+                <input type="text" class="form-control fs-5 fw-bold p-0 text-center border-0" value="01">
+              </div>
+              <div class="lh-0">
+                <a href="#"><span class="material-icons text-wordColor_2 p-0 buySidebar_hover">add</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--2-->
+  <div class="card mb-3 position-relative rounded-1">
+    <a href="javascript:;" class="position-absolute top-0 start-0">
+      <span class="material-icons text-primary">close</span>
+    </a>
+    <div class="row g-0 pt-7 ps-7 pb-4">
+      <div class="col-4">
+        <div class="ratio ratio-1x1 h-100">
+          <img class="object-fit-cover"
+              src="https://github.com/hexschool/webLayoutTraining1st/blob/master/exhibition-week6/michel-catalisano--a0D9LpcKV8-unsplash.jpg?raw=true"
+              alt="參展照片">
+        </div>  
+      </div>
+      <div class="col-8">
+        <div class="card-body pb-0 pt-0 d-flex justify-content-around align-items-center">
+          <div class="flex-grow-1 d-flex flex-column justify-content-between">
+            <h5 class="card-title mb-1 fs-10 fs-sm-5 fw-bold">2020 台味設計展</h5>
+            <p class="card-text mb-1">01 JUN — 31 OCT</p>
+            <span class="text-wordColor_2 mb-9 d-block">全票</span>
+            <p class="fs-5 fw-bold">NT$350</p>
+          </div>
+          <div class="cardInputList flex-grow-md-1 d-flex align-items-center">
+            <div
+              class=" d-flex flex-column-reverse flex-md-row align-items-center justify-content-around">
+              <div class="lh-0">
+                <a href="#"><span class="material-icons text-wordColor_2 p-0 buySidebar_hover">remove</span></a>
+              </div>
+              <div class="mx-16 mx-md-0">
+                <input type="text" class="form-control fs-5 fw-bold p-0 text-center border-0" value="01">
+              </div>
+              <div class="lh-0">
+                <a href="#"><span class="material-icons text-wordColor_2 p-0 buySidebar_hover">add</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--3-->
+  <div class="card mb-3 position-relative rounded-1">
+    <a href="javascript:;" class="position-absolute top-0 start-0">
+      <span class="material-icons text-primary">close</span>
+    </a>
+    <div class="row g-0 pt-7 ps-7 pb-4">
+      <div class="col-4">
+        <div class="ratio ratio-1x1 h-100">
+          <img class="object-fit-cover"
+              src="https://github.com/hexschool/webLayoutTraining1st/blob/master/exhibition-week6/moralis-tsai-8xsktFRw28I-unsplash.jpg?raw=true"
+              alt="參展照片">
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="card-body pb-0 pt-0 d-flex justify-content-around align-items-center">
+          <div class="flex-grow-1 d-flex flex-column justify-content-between">
+            <h5 class="card-title mb-1 fs-10 fs-sm-5 fw-bold">2020 台味設計展</h5>
+            <p class="card-text mb-1">01 JUN — 31 OCT</p>
+            <span class="text-wordColor_2 mb-9 d-block">全票</span>
+            <p class="fs-5 fw-bold">NT$350</p>
+          </div>
+          <div class="cardInputList flex-grow-md-1 d-flex align-items-center">
+            <div
+              class=" d-flex flex-column-reverse flex-md-row align-items-center justify-content-around">
+              <div class="lh-0">
+                <a href="#"><span class="material-icons text-wordColor_2 p-0 buySidebar_hover">remove</span></a>
+              </div>
+              <div class="mx-16 mx-md-0">
+                <input type="text" class="form-control fs-5 fw-bold p-0 text-center border-0" value="01">
+              </div>
+              <div class="lh-0">
+                <a href="#"><span class="material-icons text-wordColor_2 p-0 buySidebar_hover">add</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="offcanvas-footer px-4 px-md-3 bg-dark py-7">
+  <div class="d-flex align-items-center text-white">
+    <p class="fs-5 fw-bold me-4">小計</p>
+    <p class="fw-5 fw-bold me-auto">NT$1050</p>
+    <a href="./checkOrder.html" class="btn btn-outline-primary bg-white py-8 px-7 buySidebar_hover2">前往結帳</a>
+  </div>
+</div>
+</div>
+<!-----------------------------------------buySidebar--end>
+  <!--返迴鈕-->
+  <!--返迴按鈕-->
+<div class="position-fixed bottom-5 end-1 z-index-9999">
+  <a 
+    href="#"
+    id="btnColorChange"
+    class="
+            d-block
+            bg-thirdColor
+            text-light
+            rounded-circle
+            px-16
+            py-2
+            transform-y-1
+            transition-duration-1
+          "
+  >
+    <i class="material-icons material-icons-round
+      fs-2"
+    >
+    keyboard_arrow_up
+    </i>
+  </a>
+</div>
+  <main>
+  
+<!------------------------------------------------------------------------------detail.html>
+  <!--detail 明細-->
+<section class="detail">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="detail_picBox bg-cover w-100 position-relative mb-3"
+          style="background-image: url('./assets/images/christmas/christmas_1.jpg');">
+          <div class="detail_date d-flex justify-content-end align-items-end align-items-lg-center">
+            <div class="detail_dateData d-flex  flex-lg-column align-items-start d-none d-lg-block">
+              <p class="fw-bolder">01</p>
+              <p class="fw-bolder">NOV</p>
+              <p class="fw-bolder">|</p>
+              <p class="fw-bolder">31</p>
+              <p class="fw-bolder">DEC</p>
+            </div>
+            
+          </div>
+        </div>
+        <ul>
+          <li class="d-flex mb-3">
+            <h1 class="h5 fw-bolder me-1">2021 台味聖誕展</h1>
+            <img
+              src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/8d1ef3b63951b7f749edd130ff66e4d4856a3df2/exhibition-week6/facebook-24px.svg"
+              alt="FB icnon">
+            <div class="d-lg-none ms-auto fw-bolder">
+              <p>01 NOV — 31 DEC</p>
+            </div>
+          </li>
+          <li>
+            <p class="font-Roboto">一年一度的台味設計展由經濟部工業局主辦、台灣創意設計中心執行，每年，針對在地生活、文化及產業發展特色，運用設計思考詮釋新時代的意涵，並以展覽呈現在地設計。</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-md-6 buy_box pt-13 pt-lg-15">
+            <ul class="fs-1 fw-bolder d-flex justify-content-center mb-4">
+              <li>
+                <a href="#"><span class="material-icons text-dark ticket_hover">remove</span></a>
+              </li>
+              <li class="site">01</li>
+              <li>
+                <a href="#" class="ticket_hover"><span class="material-icons text-dark ticket_hover">add</span></a>
+              </li>
+            </ul>
+            <p class="text-center text-wordColor_1">張</p>
+          </div>
+          <div class="col-md-6 buy_box pt-13 pt-lg-15 hr">
+            <p class="fs-1 fw-bolder text-center mb-4">NT$350</p>
+            <p class="text-center text-wordColor_1">票種</p>
+            <ul class="d-flex justify-content-center">
+              <li><a href="#" class="text-dark py-2 px-2 ticket_hover">學生</a></li>
+              <li><a href="#" class="text-dark py-2 px-2 ticket_hover">全票</a></li>
+              <li><a href="#" class="text-dark py-2 px-2 ticket_hover">愛心</a></li>
+            </ul>
+          </div>
+          <div class="col-12 mt-13">
+            <div class="d-flex">
+              <button 
+                type="button" 
+                class="btn btn-outline-primary js-collert-btn me-4 flex-grow-1"
+              >
+                收藏展覽
+              </button>
+              <button 
+                type="button" 
+                class="btn btn-secondary js-add-cart flex-grow-1"
+              >
+                購買票券
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--present 介紹-->
+<article class="present">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 order-lg-last mb-11 mb-lg-0">
+        <h2 class="fs-5 fw-bolder mb-3">聖誕展</h2>
+        <p class="fs-5 mb-2">​Celebration of Style and Art</p>
+        <p class="text-wordColor_1 mb-3 text-indent">
+          匯集美、日、臺等地的藝術家與時尚設計師的作品。以跨界跨域的潮流文化為軸心，結合街頭塗鴉、時尚文化、名牌符號等，藉由各自特殊的表現語彙，傳達對社會當下流行文化的自我反嘲。然而這些深受大眾喜愛的藝術家，也讓「時尚」的概念不再扁平單一，相反的，他們展現了對社會更具魅力的反思，也提出了對於潮文化的自我觀點。
+        </p>
+        <p class="text-wordColor_1">從臺灣前輩藝術家林淵、國際知名的超扁平藝術家村上隆、臺灣彩繪雕塑家洪易、以及當代新玩具雕塑代表Kaws
+          等，都受到許多收藏家的喜愛，同時也是當代藝術史上重要的一員。在這個展區，向藏家借展的作品都是一時之選，也反映出街頭藝術發展的某一種共性。另外，在與時尚跨界的藝術表現上，有永遠嘲諷時尚卻很時尚的藝術家Death
+          NYC、臺灣新銳服裝設計師吳日云、尋找鎂光燈背後那真實藝術家身分的郭彥甫、年輕雕塑家賴冠仲、橫跨藝術與時尚設計師雙重身分的雙人組陳薇與李崇德、創造出療癒角色俊寶Zunbo
+          的韓國設計團隊Sakubo，以及日本藝術家喜久田尚美、南館麻美子等。展區透過空間的裝置與時尚語彙，完美詮釋了藝術、設計與潮流文化的多元樣貌。</p>
+      </div>
+      <div class="col-12 mb-lg-6 mb-3
+                  h-x4 img-position-center">
+        <img
+          class="w-auto h-100 w-md-100 h-md-auto"
+          src="./assets/images/christmas/christmas_2.jpg"
+          alt="展覽照片">
+      </div>
+      <div class="col-lg-4 
+                  img-position-center h-x5.59">
+        <img 
+          class="w-auto h-100"
+          src="./assets/images/christmas/christmas_4.jpg"
+          alt="">
+      </div>
+    </div>
+  </div>
+</article>
+<!------------------------------------------------------------------------------end>
+
+  </main>
+  <!--section like 輪播-->
+<!--swiper-->
+<div class="container">
+  <h2 class="fs-2 fw-bolder mt-4 mt-md-12 mb-2 mb-md-3">猜你也喜歡...</h2>
+  <div class="row mb-md-12">
+    <div class="col-12 col-md-11 offset-md-1">
+      <div class="swiper-container overflow-hidden">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <!--第一輪-->
+          <!--1-->
+          <div class="swiper-slide">
+            <a 
+              href="./christmas.html"
+              class="colorHover--secondary d-block"
+            >
+              <div class="card border-0">
+                <div class="card__img__hover__linear
+                            card__img__text__hover
+                            img-position-center
+                            card-img-top
+                          "
+                >
+                  <img
+                    src="./assets/images/christmas/christmas_3_black.jpg"
+                    class="card-img-top" 
+                    alt="..."
+                  >
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">(1)No.22 線上聖誕設計展</h5>
+                  <p class="card-text">$350</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!--2-->
+          <div class="swiper-slide">
+            <a 
+              href="./detail.html"
+              class="colorHover--secondary d-block"
+            >
+              <div class="card border-0">
+                <div class="card__img__hover__linear
+                            card__img__text__hover
+                            img-position-center
+                            card-img-top
+                          "
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1567722681579-c671cabd2810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80"
+                    class="card-img-top" 
+                    alt="..."
+                  >
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">(2)No.22 線上設計展</h5>
+                  <p class="card-text">$350</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!--3-->
+          <div class="swiper-slide">
+            <a 
+              href="./kaohsiung.html"
+              class="colorHover--secondary d-block"
+            >
+            <div class="card border-0">
+              <div class="card__img__hover__linear
+                          card__img__text__hover
+                          img-position-center
+                          card-img-top
+                        "
+              >
+                <img
+                  src="./assets/images/Kaohsiung/kaohsiung_3_black.jpg"
+                  class="card-img-top" 
+                  alt="..."
+                >
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">(3)No.22 線上高雄設計展</h5>
+                <p class="card-text">$350</p>
+              </div>
+            </div>
+            </a> 
+          </div>
+
+          <!--第二輪-->
+          <!--1-->
+          <div class="swiper-slide">
+            <a 
+              href="./christmas.html"
+              class="colorHover--secondary d-block"
+            >
+              <div class="card border-0">
+                <div class="card__img__hover__linear
+                            card__img__text__hover
+                            img-position-center
+                            card-img-top
+                          "
+                >
+                  <img
+                    src="./assets/images/christmas/christmas_3_black.jpg"
+                    class="card-img-top" 
+                    alt="..."
+                  >
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">(2-1)No.22 線上聖誕設計展</h5>
+                  <p class="card-text">$350</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!--2-->
+          <div class="swiper-slide">
+            <a 
+              href="./detail.html"
+              class="colorHover--secondary d-block"
+            >
+              <div class="card border-0">
+                <div class="card__img__hover__linear
+                            card__img__text__hover
+                            img-position-center
+                            card-img-top
+                          "
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1567722681579-c671cabd2810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80"
+                    class="card-img-top" 
+                    alt="..."
+                  >
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">(2-2)No.22 線上設計展</h5>
+                  <p class="card-text">$350</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!--3-->
+          <div class="swiper-slide">
+            <a 
+              href="./kaohsiung.html"
+              class="colorHover--secondary d-block"
+            >
+            <div class="card border-0">
+              <div class="card__img__hover__linear
+                          card__img__text__hover
+                          img-position-center
+                          card-img-top
+                        "
+              >
+                <img
+                  src="./assets/images/Kaohsiung/kaohsiung_3_black.jpg"
+                  class="card-img-top" 
+                  alt="..."
+                >
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">(2-3)No.22 線上高雄設計展</h5>
+                <p class="card-text">$350</p>
+              </div>
+            </div>
+            </a> 
+          </div>
+
+          <!--第三輪-->
+          <!--1-->
+          <div class="swiper-slide">
+            <a 
+              href="./christmas.html"
+              class="colorHover--secondary d-block"
+            >
+              <div class="card border-0">
+                <div class="card__img__hover__linear
+                            card__img__text__hover
+                            img-position-center
+                            card-img-top
+                          "
+                >
+                  <img
+                    src="./assets/images/christmas/christmas_3_black.jpg"
+                    class="card-img-top" 
+                    alt="..."
+                  >
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">(3-1)No.22 線上聖誕設計展</h5>
+                  <p class="card-text">$350</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!--2-->
+          <div class="swiper-slide">
+            <a 
+              href="./detail.html"
+              class="colorHover--secondary d-block"
+            >
+              <div class="card border-0">
+                <div class="card__img__hover__linear
+                            card__img__text__hover
+                            img-position-center
+                            card-img-top
+                          "
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1567722681579-c671cabd2810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80"
+                    class="card-img-top" 
+                    alt="..."
+                  >
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">(3-2)No.22 線上設計展</h5>
+                  <p class="card-text">$350</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!--3-->
+          <div class="swiper-slide">
+            <a 
+              href="./kaohsiung.html"
+              class="colorHover--secondary d-block"
+            >
+            <div class="card border-0">
+              <div class="card__img__hover__linear
+                          card__img__text__hover
+                          img-position-center
+                          card-img-top
+                        "
+              >
+                <img
+                  src="./assets/images/Kaohsiung/kaohsiung_3_black.jpg"
+                  class="card-img-top" 
+                  alt="..."
+                >
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">(3-3)No.22 線上高雄設計展</h5>
+                <p class="card-text">$350</p>
+              </div>
+            </div>
+            </a> 
+          </div>
+          <!--end-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--subscribe 下方banner-->
+<section class="subscribe_bgPic bg-cover d-flex align-items-end" data-aos="fade-down" data-aos-easing="linear"
+  data-aos-duration="1500">
+  <div class="container">
+    <div class="row mb-3">
+      <h2 class="subscribe_title text-white fs-2 fw-bolder mb-3">想收到最新消息嗎？<br> 快訂閱我們！</h2>
+      <div class="subscribe_mail input-group mb-3">
+        <input type="text" class="form-control border border-0" placeholder="請輸入您的電子信箱"
+          aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <span class="subscribe_btn input-group-text border border-0" id="basic-addon2"><a href="#" type="button"
+            class="subscribe_link text-white">訂閱</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+  <!--footer-->
+<footer>
+  <div class="container">
+    <div class="footer_content">
+      <div class="footer_word d-flex">
+        <h3 class="footer_title fs-4 my-7 me-3">EXHIBINECTION</h3>
+        <p class="footer_date my-7">© 2020. All Rights Reserved.</p>
+      </div>
+      <div class="footer_button d-flex">
+        <!--埋入 sing in (登入)燈箱關鍵-->
+        <a 
+          href="#" 
+          class="footer_item text-wordColor_1 my-7"
+          data-bs-toggle="modal"
+          data-bs-target=".js-sign-in-modal"
+        >
+          Sign in
+        </a>
+        <!--埋入 sing up (註冊)燈箱關鍵-->
+        <a 
+          href="#" 
+          class="footer_item text-wordColor_1 my-7 ms-4"
+          data-bs-toggle="modal"
+          data-bs-target=".js-sign-up-modal"
+        >
+          Sign up
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <!-- 登入 Modal -->
+<div 
+  class="modal fade z-index-10000 js-sign-in-modal" 
+  tabindex="-1" 
+  aria-labelledby="loginModalLabel" 
+  aria-hidden="true"
+  style="z-index: 1100;"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-3 border-3 border-bottom-0 border-start-0 border-end-0 border-secondary">
+      <div class="modal-header">
+        <h5 
+          class="modal-title text-primary fw-bolder fs-3" 
+          id="exampleModalLabel"
+        >
+          登入 Sing in
+        </h5>
+        <button 
+          type="button" 
+          class="btn-close" 
+          data-bs-dismiss="modal" 
+          aria-label="Close"
+        >
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="js-modal-login-check">
+          <div class="mb-3">
+            <label 
+              for="loginEmail" 
+              class="form-label fs-5"
+              required
+            >
+              帳號
+            </label>
+            <input 
+              type="email"
+              name="Email"
+              class="form-control js-modal-login-input js-user-email"
+              id="loginEmail"
+              arial-describedby="emailHelp"
+              placeholder="請輸入您的電子信箱"
+              autocomplete="username"
+              required
+            >
+            <!--信箱驗證-->
+            <p 
+              class="
+                      js-validate-msg validate-msg
+                      fs-10 text-danger text-end 
+                      pt-2
+                    "
+            >
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label fs-5">密碼</label>
+            <input 
+              type="password"
+              class="form-control"
+              id="loginPassword"
+              placeholder="請輸入您的密碼"
+              autocomplete="current-password"
+            >
+          </div>
+          <!--埋入跳轉按鈕，另一個忘記密碼的互動視窗-->
+          <a 
+            href="#forgotPasswordModal" 
+            data-bs-target="#forgotPasswordModal"
+            data-bs-toggle="modal"
+            data-bs-dismiss="modal"
+            class="text-secondary forgotPasswordModal-btn"
+          >
+            忘記密碼
+          </a>
+          <button
+            type="submit"
+            data-bs-dismiss="modal"
+            class="
+                    btn btn-secondary
+                    btn-lg my-3 rounded-pill w-100 
+                    js-form-submit-btn js-login-btn
+                  "
+          >
+            登入
+          </button>
+        </form>
+        <div class="position-relative my-4">
+          <div class="progress" style="height: 2px;">
+            <div
+              class="progress-bar bg-light"
+              role="progressbar"
+              style="width: 100%;"
+              aria-valuenow="50"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+            </div>
+          </div> 
+          <div class="position-absolute top-0 start-50 translate-middle px-3 bg-white fs-6 d-flex">
+            <!-- sm及以上顯示-->
+            <p class="text-wordColor_1 d-none d-sm-block">還沒有帳號？</p> 
+            <a 
+              href="#"
+              data-bs-target="#registerModal"
+              data-bs-toggle="modal"
+              data-bs-dismiss="modal"
+              class="link-primary useHover_1 js-sign-up-modal-btn"
+            >
+              註冊一個帳號
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 註冊 Modal -->
+<div 
+  class="modal fade z-index-10000 js-sign-up-modal" 
+  tabindex="-1" 
+  aria-labelledby="registerModalLabel" 
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bolder text-primary fs-7" id="registerModalLabel">
+          註冊 Sing up
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="js-modal-sign-up-check">
+          <ul class="mb-10">
+            <li class="mb-10">
+              <label for="userEmail" class="form-label mb-2">
+                帳號
+              </label>
+              <input type="email" name="Email" placeholder="請輸入 Email" id="userEmail" class="form-control">
+            </li>
+            <li class="mb-10">
+              <label for="userPassword" class="form-label mb-2">
+                密碼
+              </label>
+              <input type="password" name="密碼" placeholder="請輸入密碼" id="userPassword" autocomplete="on"
+                class="form-control">
+            </li>
+            <li class="mb-10">
+              <label for="userName" class="form-label mb-2">
+                用戶名稱
+              </label>
+              <input type="text" name="用戶名稱" placeholder="請輸入用戶名稱" id="userName" minlength="2" class="form-control">
+            </li>
+            <li class="mb-6">
+              <label for="userPhone" class="form-label mb-2">
+                手機號碼
+              </label>
+              <input type="password" name="手機" placeholder="請輸入手機號碼" id="userPhone" maxlength="10" class="form-control">
+            </li>
+            <li>
+              <button type="submit" class="btn btn-secondary w-100 rounded-pill fw-bolder">
+                註冊
+              </button>
+            </li>
+          </ul>
+          <ul>
+            <li class="mb-8">
+              <h3 class="modal-title fw-bolder text-center border-top pt-3 w-100 fs-11">
+                快速註冊
+              </h3>
+            </li>
+            <li>
+              <ul class="d-flex justify-content-center">
+                <li class="me-4">
+                  <a href="https://accounts.google.com/signin/v2/identifier?hl=zh-TW&passive=true&continue=https%3A%2F%2Fwww.google.com.tw%2F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin/"
+                    class="d-block useHover_1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Google 快速註冊"
+                    type="button">
+                    <i class="bi bi-google fs-4"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://zh-tw.facebook.com/login/web/" class="d-block useHover_1" data-bs-toggle="tooltip"
+                    data-bs-placement="bottom" title="Facebook 快速註冊" type="button">
+                    <i class="bi bi-facebook fs-4"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+      <div class="modal-footer">
+        <ul class="text-center w-100">
+          <li class="mb-3">
+            <h3 class="modal-title fs-11 fw-bolder">已有帳號？</h3>
+          </li>
+          <li>
+            <a 
+              href="#" 
+              type="button" 
+              class="
+                      btn btn-outline-primary 
+                      w-100 rounded-pill 
+                      js-sign-in-modal-btn
+                    "
+            >
+              前往登入
+            </a>
+          </li>
+        </ul>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- 忘記密碼 Modal -->
+<div 
+  class="modal fade z-index-10000" 
+  id="forgotPasswordModal" 
+  tabindex="-1" 
+  aria-labelledby="forgotPasswordModalLabel" 
+  aria-hidden="true"
+  style="z-index: 1100;"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-3 border-3 border-bottom-0 border-start-0 border-end-0 border-secondary">
+      <div class="modal-header">
+        <h5 
+          class="modal-title text-primary fw-bolder fs-3" 
+          id="forgotPasswordModalLabel"
+        >
+          忘記密碼
+        </h5>
+        <button 
+          type="button" 
+          class="btn-close" 
+          data-bs-dismiss="modal" 
+          aria-label="Close"
+        >
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5 class="fs-4 text-center py-5">請輸入您的註冊電子郵件，我們將會寄送『重新設定密碼』連結給您進行密碼設定。</h5>
+        <form class="searchPassword-check">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">註冊信箱</label>
+            <input 
+              type="email"
+              name="Email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="請輸入您註冊的電子信箱"
+            >
+          </div>
+          <button 
+            type="submit"
+            data-bs-dismiss="modal"
+            class="btn btn-secondary btn-lg my-3 rounded-pill w-100"
+            
+          >
+            確定送出
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--直播回顧 Modal-->
+
+<div 
+  class="modal fade" 
+  id="videoModal" 
+  tabindex="-1" 
+  aria-labelledby="videoModalLabel" 
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div 
+      class="videoModal__content modal-content rounded-3 border-3 border-bottom-0 border-start-0 border-end-0 border-secondary">
+      <div class="modal-header">
+        <h5 
+          class="modal-title fs-3 text-primary" 
+          id="videoModalLabel"
+        >
+          直播回顧
+        </h5>
+        <button 
+          type="button" 
+          class="btn-close" 
+          data-bs-dismiss="modal" 
+          aria-label="Close"
+        >
+      </button>
+      </div>  
+      <div class="modal-body">
+        <div 
+          class="carousel slide"
+          id="carouselExampleControls"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <!--1-->
+                <iframe
+                  width="100%"
+                  height="400"
+                  src="https://www.youtube.com/embed/TXQcLsqUTqs" 
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+            </div>
+            <div class="carousel-item">
+              <!--2-->
+              <iframe 
+              width="100%"
+              height="400"
+              src="https://www.youtube.com/embed/1ZkDPqgwZts" 
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              >
+              </iframe>
+            </div>
+            <div class="carousel-item">
+              <!--3-->
+              <iframe 
+              width="100%"
+              height="400"
+              src="https://www.youtube.com/embed/r_PgrPKUjcA" 
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              >
+              </iframe>
+            </div>  
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+          <span class="carousel-control-prev-icon" arial-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+          <span class="carousel-control-next-icon" arial-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!--swiper-->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!--aos.css動畫-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!--sweetalert 彈跳訊息套件-->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+</html>

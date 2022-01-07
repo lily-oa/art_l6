@@ -13,6 +13,15 @@ $(function () {
     once: true
   });
   resetForm();
+  checkSubscriptionValue(); //訂閱成功
+
+  $('.js-subscription-btn').on('click', function () {
+    $('js-subscription-input').val('');
+    $(this).prop('disabled', true);
+    swal.fire({
+      text: '訂閱成功'
+    });
+  });
 });
 /*---------------------------------------------- */
 // loader-inner
@@ -216,7 +225,42 @@ function checkInputDate(obj) {
     input.removeClass(borderStyle);
     $(errorMsg).removeClass('d-block');
   }
-} //----------------------------------------------------
+} //----------------------------------------------------  
+// subscribe.ejs 關於 "訂閱" 
+
+
+$('.js-subscription-input').on('input propertychange', function () {
+  var borderStyle = ['border-danger', 'border-2', 'animate__animated', 'animate__headShake'];
+  var inputValue = $(this).val();
+  var rule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+  var errorName = $(this).attr('name');
+  var errorMsg = $('.js-subscription-msg');
+  var errorCustomMsg = "".concat(errorName, " \u683C\u5F0F\u932F\u8AA4");
+
+  if (inputValue === '') {
+    $(this).removeClass(borderStyle);
+    $(errorMsg).removeClass('d-block');
+    $('.js-subscription-btn').prop('disabled', true);
+  } else if (!rule.test(inputValue)) {
+    $(this).addClass(borderStyle);
+    $(errorMsg).addClass('d-block');
+    $(errorMsg).text(errorCustomMsg);
+    $('.js-subscription-btn').prop('disabled', true);
+  } else {
+    $(this).removeClass(borderStyle);
+    $(errorMsg).removeClass('d-block');
+    $('.js-subscription-btn').prop('disabled', false);
+  }
+});
+
+function checkSubscriptionValue() {
+  var errorMsg = $('.js-subscription-msg');
+
+  if ($('.js-subscription-input').val() === '') {
+    $('.js-subscription-btn').prop('disabled', true);
+    $(errorMsg).removeClass('d-block');
+  }
+}
 "use strict";
 
 // sweetalert 設定值 modal.js
@@ -270,4 +314,16 @@ $('.searchPassword-check').on('submit', function (event) {
     text: '模擬訊息'
   });
 });
+"use strict";
+
+function swalFn(msg) {
+  Swal.fire({
+    position: 'top',
+    icon: 'success',
+    title: msg,
+    toast: true,
+    showConfirmButton: false,
+    timer: 1800
+  });
+}
 //# sourceMappingURL=all.js.map

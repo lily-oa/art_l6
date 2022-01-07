@@ -7816,6 +7816,9 @@ textarea.form-control-lg {
 .object-scale-down {
   object-fit: scale-down !important; }
 
+.text-shadow-1 {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important; }
+
 .min-h-x3\.45 {
   min-height: 345px !important; }
 
