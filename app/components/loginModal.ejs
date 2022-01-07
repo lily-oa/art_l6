@@ -53,15 +53,28 @@
             >
             </p>
           </div>
-
           <div class="mb-3">
-            <label for="loginPassword" class="form-label fs-5">密碼</label>
+            <label 
+              for="loginPassword" 
+              class="form-label fs-5"
+            >
+              密碼
+            </label>
             <input 
               type="password"
-              class="form-control"
+              name="密碼"
+              class="form-control js-modal-login-input js-user-password"
               id="loginPassword"
               placeholder="請輸入您的密碼"
-              autocomplete="current-password"
+              autocomplete="on"
+            >
+            <!--密碼驗證-->
+            <p 
+              class="
+                      js-validate-msg validate-msg
+                      fs-10 text-danger text-end 
+                      pt-2
+                    "
             >
           </div>
           <!--埋入跳轉按鈕，另一個忘記密碼的互動視窗-->
@@ -71,6 +84,8 @@
             data-bs-toggle="modal"
             data-bs-dismiss="modal"
             class="text-secondary forgotPasswordModal-btn"
+            pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*?&]{1})[A-Za-z\d@#$!%*?&]{8,}$'
+            required
           >
             忘記密碼
           </a>
