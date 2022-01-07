@@ -12,6 +12,13 @@ $utilities: map-merge(
         scale-down,
       ),
     ),
+    "text-shadow": (
+      property: text-shadow,
+      class: text-shadow,
+      values:(
+        1: 0 0 10px rgba(0, 0, 0, .8),
+      ),
+    ),
     "width":(
       property: width,
       responsive: true,

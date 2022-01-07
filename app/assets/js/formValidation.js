@@ -99,3 +99,37 @@ function checkInputDate(obj) {
 }
 
 //----------------------------------------------------  
+// subscribe.ejs 關於 "訂閱" 
+$('.js-subscription-input').on('input propertychange', function() {
+  const borderStyle = ['border-danger', 'border-2', 'animate__animated', 'animate__headShake'];
+  const inputValue = $(this).val();
+  const rule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+  const errorName =  $(this).attr('name');
+  const errorMsg = $('.js-subscription-msg');
+  const errorCustomMsg = `${errorName} 格式錯誤`;
+
+  if (inputValue === '') {
+    $(this).removeClass(borderStyle);
+    $(errorMsg).removeClass('d-block');
+    $('.js-subscription-btn').prop('disabled', true);
+
+  } else if(!rule.test(inputValue)) {
+    $(this).addClass(borderStyle);
+    $(errorMsg).addClass('d-block');
+    $(errorMsg).text(errorCustomMsg);
+    $('.js-subscription-btn').prop('disabled', true);
+
+  } else {
+    $(this).removeClass(borderStyle);
+    $(errorMsg).removeClass('d-block');
+    $('.js-subscription-btn').prop('disabled', false);
+  }
+});
+function checkSubscriptionValue() {
+  const errorMsg = $('.js-subscription-msg');
+
+  if($('.js-subscription-input').val() === '') {
+    $('.js-subscription-btn').prop('disabled', true);
+    $(errorMsg).removeClass('d-block');
+  }
+}
