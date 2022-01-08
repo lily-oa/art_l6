@@ -16,11 +16,9 @@ $(function () {
   checkSubscriptionValue(); //訂閱成功
 
   $('.js-subscription-btn').on('click', function () {
-    $('js-subscription-input').val('');
+    $('.js-subscription-input').val('');
     $(this).prop('disabled', true);
-    swal.fire({
-      text: '訂閱成功'
-    });
+    swalFn('成功訂閱');
   });
 });
 /*---------------------------------------------- */
@@ -220,6 +218,35 @@ function checkInputDate(obj) {
       $(errorMsg).text("".concat(errorName, "\u70BA\u5FC5\u586B"));
     } else {
       $(errorMsg).text(errorCustomMsg);
+    }
+  } else {
+    input.removeClass(borderStyle);
+    $(errorMsg).removeClass('d-block');
+  }
+}
+
+function checkUserName(obj) {
+  var borderStyle = ['border-danger', 'animate__animated', 'animate__headShake'];
+  var input = obj.input,
+      inputValue = obj.inputValue,
+      rule = obj.rule,
+      symbolRule = obj.symbolRule,
+      errorName = obj.errorName;
+  var errorMsg = $(input).next();
+
+  if (!rule.test(inputValue)) {
+    input.addClass(borderStyle);
+    $(errorMsg).addClass('d-block');
+
+    if (symbolRule.test(inputValue)) {
+      console.log(symbolRule.test(inputValue));
+      $(errorMsg).text("".concat(errorName, "\u4E0D\u5F97\u542B\u7279\u6B8A\u7B26\u865F\u6216\u6578\u5B57"));
+    } else if (inputValue === '') {
+      $(errorMsg).text("".concat(errorName, "\u70BA\u5FC5\u586B"));
+    } else if (inputValue.length <= 1) {
+      input.addClass(borderStyle);
+      $(errorMsg).addClass('d-block');
+      $(errorMsg).text("".concat(errorName, "\u9808\u8D85\u904E\u5169\u500B\u5B57\u4EE5\u4E0A"));
     }
   } else {
     input.removeClass(borderStyle);
