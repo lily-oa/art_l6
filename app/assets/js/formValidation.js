@@ -44,6 +44,7 @@ function validationPassword() {
   };
   validationAllInputsFn(data);
 }
+
 //
 function validationAllInputsFn(data) {
   const { inputs, rule, msg } = data;
@@ -97,7 +98,30 @@ function checkInputDate(obj) {
     $(errorMsg).removeClass('d-block');
   }
 }
+function checkUserName(obj) {
+  const borderStyle = ['border-danger', 'animate__animated', 'animate__headShake'];
+  const { input, inputValue, rule, symbolRule, errorName } = obj;
+  const errorMsg = $(input).next();
 
+  if (!rule.test(inputValue)) {
+    input.addClass(borderStyle);
+    $(errorMsg).addClass('d-block');
+
+    if(symbolRule.test(inputValue)) {
+      console.log(symbolRule.test(inputValue));
+      $(errorMsg).text(`${errorName}不得含特殊符號或數字`);
+    } else if(inputValue === '') {
+      $(errorMsg).text(`${errorName}為必填`);
+    } else if (inputValue.length <= 1) {
+      input.addClass(borderStyle);
+      $(errorMsg).addClass('d-block');
+      $(errorMsg).text(`${errorName}須超過兩個字以上`);
+    }
+  } else {
+    input.removeClass(borderStyle);
+    $(errorMsg).removeClass('d-block');
+  }
+}
 //----------------------------------------------------  
 // subscribe.ejs 關於 "訂閱" 
 $('.js-subscription-input').on('input propertychange', function() {

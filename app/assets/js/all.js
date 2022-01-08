@@ -12,12 +12,10 @@ $(function(){
   checkSubscriptionValue();
 
   //訂閱成功
-  $('.js-subscription-btn').on('click', function(){
-    $('js-subscription-input').val('');
+  $('.js-subscription-btn').on('click', function() {
+    $('.js-subscription-input').val('');
     $(this).prop('disabled', true);
-    swal.fire({
-      text: '訂閱成功',
-    });
+    swalFn('成功訂閱');
   });
   
 });
