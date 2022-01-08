@@ -18554,15 +18554,7 @@ p {
   width: 350px;
 }
 
-.subscribe_btn {
-  background: #E31277;
-}
-
-.subscribe_btn:hover {
-  background: #630834;
-}
-
-.subscribe_btn .subscribe_link {
+.subscribe_link {
   padding: 8px 40px;
 }
 
