@@ -9,17 +9,11 @@
 .subscribe_mail{
   width: 350px;
 }
-.subscribe_btn{
-  background: $secondary;
-  &:hover{
-      background: $primary;
-    }
-  .subscribe_link{
+
+.subscribe_link{
     padding: 8px 40px;
     
   }
-}
-
 // pad
 @include pad{
   .container{
