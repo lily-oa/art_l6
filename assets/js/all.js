@@ -259,8 +259,27 @@ function checkUserName(obj) {
     $(errorMsg).removeClass('d-block');
   }
 } //----------------------------------------------------  
-// subscribe.ejs 關於 "訂閱" 
+//關於信用上及表單送出時按鈕的變化
 
+
+function checkFormValue(inputs) {
+  var submitBtn = $('.js-form-submit-btn');
+  var inputValueTrue = 0;
+  inputs.forEach(function (input) {
+    if (input.value !== '') {
+      inputValueTrue += 1;
+    }
+  });
+
+  if (inputValueTrue === inputs.length) {
+    $(submitBtn).siblings('.disabled-style').addClass('d-none');
+  } else {
+    $(submitBtn).siblings('.disabled-style').removeClass('d-none');
+  }
+}
+
+; //----------------------------------------------------  
+// subscribe.ejs 關於 "訂閱" 
 
 $('.js-subscription-input').on('input propertychange', function () {
   var borderStyle = ['border-danger', 'border-2', 'animate__animated', 'animate__headShake'];
