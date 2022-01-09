@@ -822,6 +822,7 @@
             >
             </p>
           </div>
+
           <div class="mb-3">
             <label 
               for="loginPassword" 
@@ -836,6 +837,8 @@
               id="loginPassword"
               placeholder="請輸入您的密碼"
               autocomplete="on"
+              pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*?&]{1})[A-Za-z\d@#$!%*?&]{8,}$'
+              required
             >
             <!--密碼驗證-->
             <p 
