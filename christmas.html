@@ -851,17 +851,20 @@
           >
             忘記密碼
           </a>
-          <button
-            type="submit"
-            data-bs-dismiss="modal"
-            class="
-                    btn btn-secondary
-                    btn-lg my-3 rounded-pill w-100 
-                    js-form-submit-btn js-login-btn
-                  "
-          >
-            登入
-          </button>
+          <div>
+            <div class="disabled-style"></div>
+            <button
+              type="submit"
+              data-bs-dismiss="modal"
+              class="
+                      btn btn-secondary
+                      btn-lg my-3 rounded-pill w-100 
+                      js-form-submit-btn js-login-btn
+                    "
+            >
+              登入
+            </button>
+          </div>
         </form>
         <div class="position-relative my-4">
           <div class="progress" style="height: 2px;">
@@ -944,11 +947,20 @@
             </p>
             </li>
             <li class="mb-10">
-              <label for="userPassword" class="form-label mb-2">
+              <label 
+                for="userPassword" 
+                class="form-label mb-2"
+              >
                 密碼
               </label>
-              <input type="password" name="密碼" placeholder="請輸入密碼" id="userPassword" autocomplete="on"
-                class="form-control">
+              <input 
+                type="password" 
+                name="密碼" 
+                placeholder="請輸入密碼" 
+                id="userPassword" 
+                autocomplete="on"
+                class="form-control"
+              >
             </li>
             <li class="mb-10">
               <label for="userName" class="form-label mb-2">
