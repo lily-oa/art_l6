@@ -19057,6 +19057,37 @@ p {
   background-size: cover;
 }
 
+.border__bottom__hover {
+  position: relative;
+}
+
+.border__bottom__hover::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background: red;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition-duration: .2s;
+       -o-transition-duration: .2s;
+          transition-duration: .2s;
+  opacity: 0;
+}
+
+.border__bottom__hover::hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+.border__bottom__hover--checked::before {
+  width: 100%;
+  opacity: 1;
+}
+
 /*-- pages --*/
 .card_pic {
   height: 350px;
