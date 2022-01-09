@@ -122,6 +122,26 @@ function checkUserName(obj) {
     $(errorMsg).removeClass('d-block');
   }
 }
+
+//----------------------------------------------------  
+//關於信用上及表單送出時按鈕的變化
+function checkFormValue(inputs) {
+  const submitBtn = $('.js-form-submit-btn');
+  let inputValueTrue = 0;
+
+  inputs.forEach(function(input) {
+    if (input.value !== '') {
+      inputValueTrue += 1;
+    }
+  });
+
+  if (inputValueTrue === inputs.length) {
+    $(submitBtn).siblings('.disabled-style').addClass('d-none');
+  } else {
+    $(submitBtn).siblings('.disabled-style').removeClass('d-none');
+  }
+};
+
 //----------------------------------------------------  
 // subscribe.ejs 關於 "訂閱" 
 $('.js-subscription-input').on('input propertychange', function() {
