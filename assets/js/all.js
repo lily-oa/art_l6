@@ -262,6 +262,15 @@ function checkUserName(obj) {
 //關於信用上及表單送出時按鈕的變化
 
 
+$('.js-modal-login-check').on('change', function () {
+  var formInputs = document.querySelectorAll('.js-modal-login-input');
+  checkFormValue(formInputs);
+});
+$('.js-modal-sign-up-check').on('change', function () {
+  var formInputs = document.querySelectorAll('.js-modal-sign-up-input');
+  checkFormValue(formInputs);
+});
+
 function checkFormValue(inputs) {
   var submitBtn = $('.js-form-submit-btn');
   var inputValueTrue = 0;
@@ -378,4 +387,34 @@ function swalFn(msg) {
     timer: 1800
   });
 }
+"use strict";
+
+//首頁輪播
+//設定輪播圖片間距
+var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 1.5
+    },
+    768: {
+      slidesPerView: 2
+    },
+    992: {
+      slidesPerView: 2.5,
+      spaceBetween: 30
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  }
+});
+/*---------------------------------------------- */
 //# sourceMappingURL=all.js.map
