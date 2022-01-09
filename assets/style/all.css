@@ -19032,6 +19032,14 @@ p {
      object-fit: cover;
 }
 
+.disabled-style {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  cursor: not-allowed;
+  background: rgba(248, 249, 250, 0.5);
+}
+
 .validate-msg {
   position: relative;
   display: none;
