@@ -118,6 +118,7 @@ function validationForm() {
   validationEmail();
   validationPassword();
   validationUserName();
+  validationPhone();
 } //信箱驗證
 
 
@@ -157,6 +158,16 @@ function validationUserName() {
       checkUserName(inputDatas);
     });
   });
+} //手機驗證
+
+
+function validationPhone() {
+  var data = {
+    inputs: document.querySelectorAll('.js-user-phone'),
+    rule: /^09\d{8}$/,
+    msg: '格式錯誤，須為 09 開頭的 10 碼數字'
+  };
+  validationAllInputsFn(data);
 } //
 
 
