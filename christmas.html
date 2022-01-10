@@ -787,86 +787,87 @@
       </div>
       <div class="modal-body">
         <form class="js-modal-login-check">
-          <div class="mb-3">
-            <label 
-              for="loginEmail" 
-              class="form-label fs-5"
-              required
+          <ul>
+            <li class="mb-3">
+              <label 
+                for="loginEmail" 
+                class="form-label fs-5"
+                required
+              >
+                帳號
+              </label>
+              <input 
+                type="email"
+                name="Email"
+                class="form-control js-modal-login-input js-user-email"
+                id="loginEmail"
+                arial-describedby="emailHelp"
+                placeholder="請輸入您的電子信箱"
+                autocomplete="username"
+                required
+              >
+              <!--信箱驗證-->
+              <p 
+                class="
+                        js-validate-msg validate-msg
+                        fs-10 text-danger text-end 
+                        pt-2
+                      "
+              >
+              </p>
+            </li>
+            <li class="mb-3">
+              <label 
+                for="loginPassword" 
+                class="form-label fs-5"
+              >
+                密碼
+              </label>
+              <input 
+                type="password"
+                name="密碼"
+                class="form-control js-modal-login-input js-user-password mb-2"
+                id="loginPassword"
+                placeholder="請輸入您的密碼"
+                autocomplete="on"
+                pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*?&]{1})[A-Za-z\d@#$!%*?&]{8,}$'
+                required
+              >
+              <!--密碼驗證-->
+              <p 
+                class="
+                        js-validate-msg validate-msg
+                        fs-10 text-danger text-end 
+                        pt-2
+                      "
+              ></p>
+            
+            <!--埋入跳轉按鈕，另一個忘記密碼的互動視窗-->
+            <a 
+              href="#forgotPasswordModal" 
+              data-bs-target="#forgotPasswordModal"
+              data-bs-toggle="modal"
+              data-bs-dismiss="modal"
+              class="text-secondary forgotPasswordModal-btn d-inline border__bottom__hover"
             >
-              帳號
-            </label>
-            <input 
-              type="email"
-              name="Email"
-              class="form-control js-modal-login-input js-user-email"
-              id="loginEmail"
-              arial-describedby="emailHelp"
-              placeholder="請輸入您的電子信箱"
-              autocomplete="username"
-              required
-            >
-            <!--信箱驗證-->
-            <p 
-              class="
-                      js-validate-msg validate-msg
-                      fs-10 text-danger text-end 
-                      pt-2
-                    "
-            >
-            </p>
-          </div>
-
-          <div class="mb-3">
-            <label 
-              for="loginPassword" 
-              class="form-label fs-5"
-            >
-              密碼
-            </label>
-            <input 
-              type="password"
-              name="密碼"
-              class="form-control js-modal-login-input js-user-password mb-2"
-              id="loginPassword"
-              placeholder="請輸入您的密碼"
-              autocomplete="on"
-              pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*?&]{1})[A-Za-z\d@#$!%*?&]{8,}$'
-              required
-            >
-            <!--密碼驗證-->
-            <p 
-              class="
-                      js-validate-msg validate-msg
-                      fs-10 text-danger text-end 
-                      pt-2
-                    "
-            ></p>
-          
-          <!--埋入跳轉按鈕，另一個忘記密碼的互動視窗-->
-          <a 
-            href="#forgotPasswordModal" 
-            data-bs-target="#forgotPasswordModal"
-            data-bs-toggle="modal"
-            data-bs-dismiss="modal"
-            class="text-secondary forgotPasswordModal-btn d-inline border__bottom__hover"
-          >
-            忘記密碼
-          </a>
-          </div>
-          <div class="position-relative">
-            <div class="disabled-style"></div>
-            <button
-              type="submit"
-              class="
-                      btn btn-secondary
-                      btn-lg rounded-pill w-100
-                      js-form-submit-btn 
-                      js-login-btn
-                    "
-            >
-              登入
-            </button>
-          </div>
+              忘記密碼
+            </a>
+            </li>
+            <li class="position-relative">
+              <div class="disabled-style"></div>
+              <button
+                type="submit"
+                class="
+                        btn btn-secondary
+                        btn-lg rounded-pill w-100
+                        js-form-submit-btn 
+                        js-login-btn
+                      "
+              >
+                登入
+              </button>
+            </li>
+          </ul>
         </form>
         <div class="position-relative my-4">
           <div class="progress" style="height: 2px;">
