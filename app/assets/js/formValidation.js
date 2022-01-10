@@ -24,6 +24,7 @@ function resetForm() {
 function validationForm() {
   validationEmail();
   validationPassword();
+  validationUserName();
 }
 
 //信箱驗證
@@ -43,6 +44,24 @@ function validationPassword() {
     msg: '須 8 碼以上含大、小寫英文、數字和特殊符號',
   };
   validationAllInputsFn(data);
+}
+//用戶名稱驗證
+function validationUserName() {
+  const userNameInputs = document.querySelectorAll('.js-user-name');
+
+  userNameInputs.forEach((input) => {
+    $(input).on('input propertychange', function() {
+      const errorName =  $(input).attr('name');
+      const inputDatas = {
+        input: $(this),
+        inputValue: $(this).val(),
+        rule: /^[A-Za-z \u4e00-\u9fa5]{2,}$/,
+        symbolRule: /[!@#$%^&*()_+-=`~\\\/[\]{}0-9]/,
+        errorName: errorName,
+      }
+      checkUserName(inputDatas);
+    });
+  });
 }
 
 //
