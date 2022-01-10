@@ -90,23 +90,51 @@
                 class="form-control js-modal-sign-up-input js-user-name"
                 required
               >
-              <!--用戶名稱驗證-->
+            <!--用戶名稱驗證-->
             <p 
             class="
                     js-validate-msg validate-msg
                     fs-10 text-danger text-end 
                     pt-2
                   "
-          ></p>
+            ></p>
             </li>
             <li class="mb-6">
-              <label for="userPhone" class="form-label mb-2">
+              <label 
+                for="userPhone" 
+                class="form-label mb-2"
+              >
                 手機號碼
               </label>
-              <input type="password" name="手機" placeholder="請輸入手機號碼" id="userPhone" maxlength="10" class="form-control">
+              <input 
+                type="tel" 
+                name="手機" 
+                placeholder="請輸入手機號碼" 
+                id="userPhone" 
+                maxlength="10"
+                pattern="^09\d{8}$"
+                class="form-control js-modal-sign-up-input js-user-phone"
+                required
+              >
+            <!--手機驗證-->
+            <p 
+            class="
+                    js-validate-msg validate-msg
+                    fs-10 text-danger text-end 
+                    pt-2
+                  "
+            ></p>
             </li>
-            <li>
-              <button type="submit" class="btn btn-secondary w-100 rounded-pill fw-bolder">
+            <li class="position-relative">
+              <div class="disabled-style"></div>
+              <button 
+                type="submit" 
+                class="
+                        btn btn-secondary w-100 
+                        rounded-pill fw-bolder
+                        js-form-submit-btn
+                      "
+              >
                 註冊
               </button>
             </li>
