@@ -975,10 +975,30 @@
             ></p>
             </li>
             <li class="mb-10">
-              <label for="userName" class="form-label mb-2">
+              <label 
+                for="userName" 
+                class="form-label mb-2"
+              >
                 用戶名稱
               </label>
-              <input type="text" name="用戶名稱" placeholder="請輸入用戶名稱" id="userName" minlength="2" class="form-control">
+              <input 
+                type="text" 
+                name="用戶名稱" 
+                placeholder="請輸入用戶名稱" 
+                id="userName" 
+                pattern='^^[a-zA-Z\s\d]+$'
+                minlength="2" 
+                class="form-control js-modal-sign-up-input js-user-name"
+                required
+              >
+              <!--用戶名稱驗證-->
+            <p 
+            class="
+                    js-validate-msg validate-msg
+                    fs-10 text-danger text-end 
+                    pt-2
+                  "
+          ></p>
             </li>
             <li class="mb-6">
               <label for="userPhone" class="form-label mb-2">
