@@ -771,7 +771,7 @@
 <div 
   class="modal fade z-index-10000 js-sign-in-modal" 
   tabindex="-1" 
-  aria-labelledby="loginModalLabel" 
+  aria-labelledby="signInModal" 
   aria-hidden="true"
   style="z-index: 1100;"
 >
@@ -797,7 +797,7 @@
           <ul>
             <li class="mb-3">
               <label 
-                for="loginEmail" 
+                for="userEmail" 
                 class="form-label fs-5"
                 required
               >
@@ -807,10 +807,8 @@
                 type="email"
                 name="Email"
                 class="form-control js-modal-login-input js-user-email"
-                id="loginEmail"
-                arial-describedby="emailHelp"
+                id="userEmail"
                 placeholder="請輸入您的電子信箱"
-                autocomplete="username"
                 required
               >
               <!--信箱驗證-->
@@ -823,9 +821,10 @@
               >
               </p>
             </li>
+
             <li class="mb-3">
               <label 
-                for="loginPassword" 
+                for="userPassword" 
                 class="form-label fs-5"
               >
                 密碼
@@ -834,7 +833,7 @@
                 type="password"
                 name="密碼"
                 class="form-control js-modal-login-input js-user-password mb-2"
-                id="loginPassword"
+                id="userPassword"
                 placeholder="請輸入您的密碼"
                 autocomplete="on"
                 pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*?&]{1})[A-Za-z\d@#$!%*?&]{8,}$'
@@ -912,7 +911,7 @@
 <div 
   class="modal fade z-index-10000 js-sign-up-modal" 
   tabindex="-1" 
-  aria-labelledby="registerModalLabel" 
+  aria-labelledby="signUpModal" 
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-centered ">
