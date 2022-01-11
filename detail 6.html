@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>設計類 - 台味設計 - design.html</title>
+    <title>設計類 - 購票介紹 - detail.html</title>
     <link rel="icon" type="image/png" href="./assets/images/my.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <link rel="stylesheet" href="./assets/style/bootstrap.css">
@@ -311,126 +311,119 @@
 </div>
   <main>
   
-<!------------------------------------------------------------------------------design.html>
-  <!--1-->
-  <!--tDesign 台味設計-->
-<section class="design">
-  <ul class="d-flex flex-column position-relative">
-    <li class="tDesign bg-primary">
-      <div class="container">
+<!------------------------------------------------------------------------------detail.html>
+  <!--detail 明細-->
+<section class="detail">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="detail_picBox bg-cover w-100 position-relative mb-3"
+          style="background-image: url('https://github.com/hexschool/webLayoutTraining1st/blob/master/exhibition-week6/alina-grubnyak-R84Oy89aNKs-unsplash.jpg?raw=true');">
+          <div class="detail_date d-flex justify-content-end align-items-end align-items-lg-center">
+            <div class="detail_dateData d-flex  flex-lg-column align-items-start d-none d-lg-block">
+              <p class="fw-bolder">01</p>
+              <p class="fw-bolder">JUN</p>
+              <p class="fw-bolder">|</p>
+              <p class="fw-bolder">31</p>
+              <p class="fw-bolder">OCT</p>
+            </div>
+            
+          </div>
+        </div>
+        <ul>
+          <li class="d-flex mb-3">
+            <h1 class="h5 fw-bolder me-1">2020 台味設計展</h1>
+            <img
+              src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/8d1ef3b63951b7f749edd130ff66e4d4856a3df2/exhibition-week6/facebook-24px.svg"
+              alt="FB icnon">
+            <div class="d-lg-none ms-auto fw-bolder">
+              <p>01 JUN — 31 OCT</p>
+            </div>
+          </li>
+          <li>
+            <p class="font-Roboto">一年一度的台味設計展由經濟部工業局主辦、台灣創意設計中心執行，每年，針對在地生活、文化及產業發展特色，運用設計思考詮釋新時代的意涵，並以展覽呈現在地設計。</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
         <div class="row">
-          <div class="col-lg-5 col-xl-5">
-            <a 
-              href="./detail.html"
-              class="d-block h-x4 img-position-center
-                    card__img__text__hover card__img__hover__scale"
-              >
-              <img
-                class="w-auto h-100
-                        w-md-100 h-md-auto
-                        w-lg-auto h-lg-100"
-                src="https://github.com/hexschool/webLayoutTraining1st/blob/master/exhibition-week6/alina-grubnyak-R84Oy89aNKs-unsplash.jpg?raw=true"
-                alt="展覽照片"
-              >
-            </a>
+          <div class="col-md-6 buy_box pt-13 pt-lg-15">
+            <ul class="fs-1 fw-bolder d-flex justify-content-center mb-4">
+              <li>
+                <a href="#"><span class="material-icons text-dark ticket_hover">remove</span></a>
+              </li>
+              <li class="site">01</li>
+              <li>
+                <a href="#" class="ticket_hover"><span class="material-icons text-dark ticket_hover">add</span></a>
+              </li>
+            </ul>
+            <p class="text-center text-wordColor_1">張</p>
           </div>
-          <div class="tDesign_date col-lg-1 col-xl-1">
-            <p class="design_word text-white fw-bolder fs-5 me-md-1 me-sm-1">01
-              <p class="design_word text-white fw-bolder fs-5 me-md-1 me-sm-1">JUN
-                <p class="design_word text-white fw-bolder fs-5 me-md-1 me-sm-1">|
-                  <p class="design_word text-white fw-bolder fs-5 me-md-1 me-sm-1">31</p>
-                  <p class="design_word text-white fw-bolder fs-5">OCT</p>
+          <div class="col-md-6 buy_box pt-13 pt-lg-15 hr">
+            <p class="fs-1 fw-bolder text-center mb-4">NT$350</p>
+            <p class="text-center text-wordColor_1">票種</p>
+            <ul class="d-flex justify-content-center">
+              <li><a href="#" class="text-dark py-2 px-2 ticket_hover">學生</a></li>
+              <li><a href="#" class="text-dark py-2 px-2 ticket_hover">全票</a></li>
+              <li><a href="#" class="text-dark py-2 px-2 ticket_hover">愛心</a></li>
+            </ul>
           </div>
-          <div class="col-lg-4 col-xl-4 order-lg-first">
-            <h1 class="fs-13 fw-bolder text-white mb-2 mb-lg-4 mb-xl-4">
-              <a href="./detail.html"
-                class="text-white one_hover"
+          <div class="col-12 mt-13">
+            <div class="d-flex">
+              <button 
+                type="button" 
+                class="btn btn-outline-primary js-collert-btn me-4 flex-grow-1"
               >
-                2020 台味設計展
-              </a>
-            </h1>
-            <p class="text-white">一年一度的台味設計展由經濟部工業局主辦、台灣創意設計中心執行，每年，針對在地生活、文化及產業發展特色，運用設計思考詮釋新時代的意涵，並以展覽呈現在地設計。</p>
+                收藏展覽
+              </button>
+              <button 
+                type="button" 
+                class="btn btn-secondary js-add-cart flex-grow-1"
+              >
+                購買票券
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </li>
-
-    <!--2-->
-    <!--online 線上聖誕設計展-->
-    <li class="online">
-      <div class="container">
-        <div class="row justify-content-lg-end">
-          <div class="col-lg-5 col-xl-5">
-            <a 
-              href="./christmas.html"
-              class="d-block h-x4 img-position-center
-                    card__img__text__hover card__img__hover__scale"
-            >
-              <img
-                class="w-auto h-100
-                      w-md-100 h-md-auto
-                      w-lg-auto h-lg-100"
-                src="./assets/images/christmas/christmas_1.jpg"
-                alt="展覽照片">
-            </a>
-          </div>
-          <div class="online_date col-lg-1 col-xl-1 position-relative">
-            <p class="design_word text-primary fw-bolder fs-5 me-md-1 me-sm-1">01
-              <p class="design_word text-primary fw-bolder fs-5 me-md-1 me-sm-1">NOV
-                <p class="design_word text-primary fw-bolder fs-5 me-md-1 me-sm-1">|
-                  <p class="design_word text-primary fw-bolder fs-5 me-md-1 me-sm-1">31</p>
-                  <p class="design_word text-primary fw-bolder fs-5">DEC</p>
-          </div>
-          <div class="col-lg-4 col-xl-4 order-lg-first">
-            <h2 class="fs-13 fw-bolder text-primary mb-2 mb-lg-4 mb-xl-4"><a href="./christmas.html"
-                class="one_hover">No.22 線上聖誕設計展</a></h2>
-            <p class="text-primary">
-              這是一個專屬於設計系畢業生的展覽，沒有華麗的名號、沒有浮誇的獎賞。讓我們用作品與理念，去碰撞真實世界裡的各種問題，創造更多美好的人事物。讓這個地球、這個世界變成每一個人心目中的理想鄉。</p>
-          </div>
-        </div>
-      </div>
-    </li>
-
-    <!--3-->
-    <!--kaohsiung 高雄設計-->
-    <li>
-    <li class="kaohsiung bg-primary">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 col-xl-5">
-            <a 
-              href="./kaohsiung.html"
-              class="d-block h-x4 img-position-center
-                    card__img__text__hover card__img__hover__scale"
-            >
-              <img
-                class="w-auto h-100
-                      w-md-100 h-md-auto
-                      w-lg-auto h-lg-100"
-                src="./assets/images/Kaohsiung/kaohsiung_2.jpg"
-                alt="展覽照片">
-            </a>
-          </div>
-          <div class="kaohsiung_date col-lg-1 col-xl-1 position-relative ">
-            <p class="design_word text-white fw-bolder fs-5 me-md-1 me-sm-1">01
-              <p class="design_word text-white fw-bolder fs-5 me-md-1 me-sm-1">JUN
-                <p class="design_word text-white fw-bolder fs-5 me-md-1 me-sm-1">|
-                  <p class="design_word text-white fw-bolder fs-5 me-md-1 me-sm-1">31</p>
-                  <p class="design_word text-white fw-bolder fs-5">OCT</p>
-          </div>
-          <div class="col-lg-4 col-xl-4 order-lg-first">
-            <h2 class="fs-13 fw-bolder text-white mb-2 mb-lg-4 mb-xl-4"><a href="./kaohsiung.html"
-                class="text-white one_hover">高雄設計節</a></h2>
-            <p class="text-white">
-              設計大高雄究竟是怎麼一回事？在這「設計」詞彙有點氾濫的年代，或許我們也搞不清楚究竟誰被誰設計了，設計生活？還是被生活設計？而當高雄這座城市建設硬體已相當程度完備時，文化軟實力又該如何輸出？</p>
-          </div>
-        </div>
-      </div>
-    </li>
-    </li>
-  </ul>
+    </div>
+  </div>
 </section>
+
+<!--present 介紹-->
+<article class="present">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 order-lg-last mb-11 mb-lg-0">
+        <h2 class="fs-5 fw-bolder mb-3">藝饗宴</h2>
+        <p class="fs-5 mb-2">​Celebration of Style and Art</p>
+        <p class="text-wordColor_1 mb-3 text-indent">
+          匯集美、日、臺等地的藝術家與時尚設計師的作品。以跨界跨域的潮流文化為軸心，結合街頭塗鴉、時尚文化、名牌符號等，藉由各自特殊的表現語彙，傳達對社會當下流行文化的自我反嘲。然而這些深受大眾喜愛的藝術家，也讓「時尚」的概念不再扁平單一，相反的，他們展現了對社會更具魅力的反思，也提出了對於潮文化的自我觀點。
+        </p>
+        <p class="text-wordColor_1">從臺灣前輩藝術家林淵、國際知名的超扁平藝術家村上隆、臺灣彩繪雕塑家洪易、以及當代新玩具雕塑代表Kaws
+          等，都受到許多收藏家的喜愛，同時也是當代藝術史上重要的一員。在這個展區，向藏家借展的作品都是一時之選，也反映出街頭藝術發展的某一種共性。另外，在與時尚跨界的藝術表現上，有永遠嘲諷時尚卻很時尚的藝術家Death
+          NYC、臺灣新銳服裝設計師吳日云、尋找鎂光燈背後那真實藝術家身分的郭彥甫、年輕雕塑家賴冠仲、橫跨藝術與時尚設計師雙重身分的雙人組陳薇與李崇德、創造出療癒角色俊寶Zunbo
+          的韓國設計團隊Sakubo，以及日本藝術家喜久田尚美、南館麻美子等。展區透過空間的裝置與時尚語彙，完美詮釋了藝術、設計與潮流文化的多元樣貌。</p>
+      </div>
+      <div class="col-12 mb-lg-6 mb-3
+                  h-x4 img-position-center">
+        <img
+          class="w-auto h-100 w-md-100 h-md-auto"
+          src="https://github.com/hexschool/webLayoutTraining1st/blob/master/exhibition-week6/max-van-den-oetelaar-IMYe9uYN27E-unsplash.jpg?raw=true"
+          alt="展覽照片">
+      </div>
+      <div class="col-lg-4 
+                  img-position-center h-x5.59">
+        <img 
+          class="w-auto h-100"
+          src="https://github.com/hexschool/webLayoutTraining1st/blob/master/exhibition-week6/ricardo-gomez-angel-j5gCOKZdm6I-unsplash.jpg?raw=true"
+          alt="">
+      </div>
+    </div>
+  </div>
+</article>
 <!------------------------------------------------------------------------------end>
+
   </main>
   <!--section like 輪播-->
 <!--swiper-->
@@ -767,7 +760,7 @@
     </div>
   </div>
 </footer>
-  <!-- Sing in 登入 Modal -->
+  <!-- 登入 Modal -->
 <div 
   class="modal fade z-index-10000 js-sign-in-modal" 
   tabindex="-1" 
@@ -794,87 +787,86 @@
       </div>
       <div class="modal-body">
         <form class="js-modal-login-check">
-          <ul>
-            <li class="mb-3">
-              <label 
-                for="loginEmail" 
-                class="form-label fs-5"
-                required
-              >
-                帳號
-              </label>
-              <input 
-                type="email"
-                name="Email"
-                class="form-control js-modal-login-input js-user-email"
-                id="loginEmail"
-                arial-describedby="emailHelp"
-                placeholder="請輸入您的電子信箱"
-                autocomplete="username"
-                required
-              >
-              <!--信箱驗證-->
-              <p 
-                class="
-                        js-validate-msg validate-msg
-                        fs-10 text-danger text-end 
-                        pt-2
-                      "
-              >
-              </p>
-            </li>
-            <li class="mb-3">
-              <label 
-                for="loginPassword" 
-                class="form-label fs-5"
-              >
-                密碼
-              </label>
-              <input 
-                type="password"
-                name="密碼"
-                class="form-control js-modal-login-input js-user-password mb-2"
-                id="loginPassword"
-                placeholder="請輸入您的密碼"
-                autocomplete="on"
-                pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*?&]{1})[A-Za-z\d@#$!%*?&]{8,}$'
-                required
-              >
-              <!--密碼驗證-->
-              <p 
-                class="
-                        js-validate-msg validate-msg
-                        fs-10 text-danger text-end 
-                        pt-2
-                      "
-              ></p>
-            
-            <!--埋入跳轉按鈕，另一個忘記密碼的互動視窗-->
-            <a 
-              href="#forgotPasswordModal" 
-              data-bs-target="#forgotPasswordModal"
-              data-bs-toggle="modal"
-              data-bs-dismiss="modal"
-              class="text-secondary forgotPasswordModal-btn d-inline border__bottom__hover"
+          <div class="mb-3">
+            <label 
+              for="loginEmail" 
+              class="form-label fs-5"
+              required
             >
-              忘記密碼
-            </a>
-            </li>
-            <li class="position-relative">
-              <div class="disabled-style"></div>
-              <button
-                type="submit"
-                class="
-                        btn btn-secondary
-                        btn-lg rounded-pill w-100
-                        js-form-submit-btn 
-                        js-login-btn
-                      "
-              >
-                登入
-              </button>
-            </li>
-          </ul>
+              帳號
+            </label>
+            <input 
+              type="email"
+              name="Email"
+              class="form-control js-modal-login-input js-user-email"
+              id="loginEmail"
+              arial-describedby="emailHelp"
+              placeholder="請輸入您的電子信箱"
+              autocomplete="username"
+              required
+            >
+            <!--信箱驗證-->
+            <p 
+              class="
+                      js-validate-msg validate-msg
+                      fs-10 text-danger text-end 
+                      pt-2
+                    "
+            >
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label 
+              for="loginPassword" 
+              class="form-label fs-5"
+            >
+              密碼
+            </label>
+            <input 
+              type="password"
+              name="密碼"
+              class="form-control js-modal-login-input js-user-password"
+              id="loginPassword"
+              placeholder="請輸入您的密碼"
+              autocomplete="on"
+              pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*?&]{1})[A-Za-z\d@#$!%*?&]{8,}$'
+              required
+            >
+            <!--密碼驗證-->
+            <p 
+              class="
+                      js-validate-msg validate-msg
+                      fs-10 text-danger text-end 
+                      pt-2
+                    "
+            ></p>
+          
+          <!--埋入跳轉按鈕，另一個忘記密碼的互動視窗-->
+          <a 
+            href="#forgotPasswordModal" 
+            data-bs-target="#forgotPasswordModal"
+            data-bs-toggle="modal"
+            data-bs-dismiss="modal"
+            class="text-secondary forgotPasswordModal-btn pt-3"
+          >
+            忘記密碼
+          </a>
+          </div>
+          <div class="position-relative">
+            <div class="disabled-style"></div>
+            <button
+              type="submit"
+              data-bs-dismiss="modal"
+              class="
+                      btn btn-secondary
+                      btn-lg rounded-pill w-100
+                      js-form-submit-btn js-login-btn
+                    "
+            >
+              登入
+            </button>
+          </div>
         </form>
         <div class="position-relative my-4">
           <div class="progress" style="height: 2px;">
@@ -907,8 +899,7 @@
   </div>
 </div>
 
-
-<!-- Sing up 註冊 Modal -->
+<!-- 註冊 Modal -->
 <div 
   class="modal fade z-index-10000 js-sign-up-modal" 
   tabindex="-1" 
@@ -918,10 +909,7 @@
   <div class="modal-dialog modal-dialog-centered ">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 
-          class="modal-title fw-bolder text-primary fs-7" 
-          id="registerModalLabel"
-        >
+        <h5 class="modal-title fw-bolder text-primary fs-7" id="registerModalLabel">
           註冊 Sing up
         </h5>
         <button 
@@ -937,7 +925,7 @@
           <ul class="mb-10">
             <li class="mb-10">
               <label 
-                for="SignUpUserEmail" 
+                for="userEmail" 
                 class="form-label mb-2"
               >
                 帳號
@@ -946,7 +934,7 @@
                 type="email" 
                 name="Email" 
                 placeholder="請輸入 Email" 
-                id="SignUpUserEmail" 
+                id="userEmail" 
                 class="form-control js-modal-sign-up-input js-user-email"
                 required
               >
@@ -960,10 +948,9 @@
             >
             </p>
             </li>
-
             <li class="mb-10">
               <label 
-                for="singUpUserPassword" 
+                for="userPassword" 
                 class="form-label mb-2"
               >
                 密碼
@@ -972,9 +959,9 @@
                 type="password" 
                 name="密碼" 
                 placeholder="請輸入密碼" 
-                id="singUpUserPassword" 
+                id="userPassword" 
                 autocomplete="on"
-                class="form-control js-modal-sign-up-input js-user-password"
+                class="form-control js-modal-login-input js-user-password"
                 pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*?&]{1})[A-Za-z\d@#$!%*?&]{8,}$'
                 required
               >
@@ -987,81 +974,27 @@
                     "
             ></p>
             </li>
-
             <li class="mb-10">
-              <label 
-                for="singUpUserName" 
-                class="form-label mb-2"
-              >
+              <label for="userName" class="form-label mb-2">
                 用戶名稱
               </label>
-              <input 
-                type="text" 
-                name="用戶名稱" 
-                placeholder="請輸入用戶名稱" 
-                id="singUpUserName" 
-                pattern='^^[a-zA-Z\s\d]+$'
-                minlength="2" 
-                class="form-control js-modal-sign-up-input js-user-name"
-                required
-              >
-            <!--用戶名稱驗證-->
-            <p 
-            class="
-                    js-validate-msg validate-msg
-                    fs-10 text-danger text-end 
-                    pt-2
-                  "
-            ></p>
+              <input type="text" name="用戶名稱" placeholder="請輸入用戶名稱" id="userName" minlength="2" class="form-control">
             </li>
-
             <li class="mb-6">
-              <label 
-                for="singUpUserPhone" 
-                class="form-label mb-2"
-              >
+              <label for="userPhone" class="form-label mb-2">
                 手機號碼
               </label>
-              <input 
-                type="tel" 
-                name="手機" 
-                placeholder="請輸入手機號碼" 
-                id="singUpUserPhone" 
-                maxlength="10"
-                pattern="^09\d{8}$"
-                class="form-control js-modal-sign-up-input js-user-phone"
-                required
-              >
-            <!--手機驗證-->
-            <p 
-              class="
-                      js-validate-msg validate-msg
-                      fs-10 text-danger text-end 
-                      pt-2
-                    "
-            ></p>
+              <input type="password" name="手機" placeholder="請輸入手機號碼" id="userPhone" maxlength="10" class="form-control">
             </li>
-            
-            <li class="position-relative">
-              <div class="disabled-style"></div>
-              <button 
-                type="submit" 
-                class="
-                        btn btn-secondary 
-                        rounded-pill w-100 btn-lg
-                        fw-bolder
-                        js-form-submit-btn
-                      "
-              >
+            <li>
+              <button type="submit" class="btn btn-secondary w-100 rounded-pill fw-bolder">
                 註冊
               </button>
             </li>
           </ul>
-          <ul class="mb-8">
-            <li>
-              <h3 
-                class="modal-title fw-bolder text-center border-top pt-3 w-100 fs-11"
-              >
+          <ul>
+            <li class="mb-8">
+              <h3 class="modal-title fw-bolder text-center border-top pt-3 w-100 fs-11">
                 快速註冊
               </h3>
             </li>
@@ -1069,49 +1002,42 @@
               <ul class="d-flex justify-content-center">
                 <li class="me-4">
                   <a href="https://accounts.google.com/signin/v2/identifier?hl=zh-TW&passive=true&continue=https%3A%2F%2Fwww.google.com.tw%2F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin/"
-                    class="d-block useHover_1" 
-                    data-bs-toggle="tooltip" 
-                    data-bs-placement="bottom" 
-                    title="Google 快速註冊"
-                    type="button"
-                  >
+                    class="d-block useHover_1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Google 快速註冊"
+                    type="button">
                     <i class="bi bi-google fs-4"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="https://zh-tw.facebook.com/login/web/" 
-                    class="d-block useHover_1" 
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="bottom" 
-                    title="Facebook 快速註冊" 
-                    type="button"
-                  >
+                  <a href="https://zh-tw.facebook.com/login/web/" class="d-block useHover_1" data-bs-toggle="tooltip"
+                    data-bs-placement="bottom" title="Facebook 快速註冊" type="button">
                     <i class="bi bi-facebook fs-4"></i>
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
-          <ul class="text-center w-100">
-            <li class="mb-3">
-              <h3 class="modal-title fs-11 fw-bolder">已有帳號？</h3>
-            </li>
-            <li>
-              <a 
-                href="#" 
-                type="button" 
-                class="
-                        btn btn-outline-primary 
-                        w-100 rounded-pill btn-lg
-                        js-sign-in-modal-btn
-                      "
-              >
-                前往登入
-              </a>
-            </li>
-          </ul>
-        </form>
       </div>
+      <div class="modal-footer">
+        <ul class="text-center w-100">
+          <li class="mb-3">
+            <h3 class="modal-title fs-11 fw-bolder">已有帳號？</h3>
+          </li>
+          <li>
+            <a 
+              href="#" 
+              type="button" 
+              class="
+                      btn btn-outline-primary 
+                      w-100 rounded-pill 
+                      js-sign-in-modal-btn
+                    "
+            >
+              前往登入
+            </a>
+          </li>
+        </ul>
+      </div>
+      </form>
     </div>
   </div>
 </div>
