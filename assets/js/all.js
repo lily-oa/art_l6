@@ -168,7 +168,11 @@ function validationPhone() {
     msg: '格式錯誤，須為 09 開頭的 10 碼數字'
   };
   validationAllInputsFn(data);
-} //
+}
+/*-----------------------尚有信用卡部份未寫----------------------*/
+
+/*-----------------------------------------------------------*/
+//
 
 
 function validationAllInputsFn(data) {
