@@ -18,8 +18,8 @@ function resetForm() {
   allSubmitBtn.forEach((btn) => {
     $(btn).siblings('.disabled-style').removeClass('d-none');
   });
-}
 
+}
 
 
 function validationForm() {

@@ -19,7 +19,6 @@ $('.js-sign-up-modal-btn').on('click', () => {
 });
 
 $('.forgotPasswordModal-btn').on('click', () => {
-  resetForm();
   signInModal.hide();
   forgotPasswordModal.show();
 });
