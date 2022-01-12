@@ -20,6 +20,7 @@ $(function(){
   
   //註冊成功
   $('.js-modal-sign-up-check').on('submit', function(event) {
+    resetForm();
     event.preventDefault();
     signUpModal.hide();
     swalFn('註冊成功');
