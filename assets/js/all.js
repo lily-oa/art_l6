@@ -352,26 +352,17 @@ $('.forgotPasswordModal-btn').on('click', function () {
   resetForm();
   signInModal.hide();
   forgotPasswordModal.show();
-}); //登入成功訊息
-
+});
 $('.js-modal-login-check').on('submit', function (event) {
   event.preventDefault();
   signInModal.hide();
-  swal.fire({
-    icon: 'success',
-    title: '登入成功',
-    text: '模擬訊息'
-  });
+  swalFn('登入成功');
 }); //註冊一個帳號成功訊息
 
 $('.js-modal-sign-up-check').on('submit', function (event) {
   event.preventDefault();
   signUpModal.hide();
-  swal.fire({
-    icon: 'success',
-    title: '註冊成功',
-    text: '模擬訊息'
-  });
+  swalFn('註冊成功');
 }); // 重設密碼連結寄出訊息
 
 $('.searchPassword-check').on('submit', function (event) {
