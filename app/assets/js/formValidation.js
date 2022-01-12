@@ -183,6 +183,7 @@ function checkFormValue(inputs) {
   }
 };
 
+
 //----------------------------------------------------  
 // subscribe.ejs 關於 "訂閱" 
 $('.js-subscription-input').on('input propertychange', function() {
