@@ -19,13 +19,6 @@ $(function () {
     $('.js-subscription-input').val('');
     $(this).prop('disabled', true);
     swalFn('成功訂閱');
-  }); //註冊成功
-
-  $('.js-modal-sign-up-check').on('submit', function (event) {
-    resetForm();
-    event.preventDefault();
-    signUpModal.hide();
-    swalFn('註冊成功');
   });
 });
 /*---------------------------------------------- */
