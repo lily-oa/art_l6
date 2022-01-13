@@ -349,12 +349,14 @@ $('.forgotPasswordModal-btn').on('click', function () {
   forgotPasswordModal.show();
 });
 $('.js-modal-login-check').on('submit', function (event) {
+  resetForm();
   event.preventDefault();
   signInModal.hide();
   swalFn('登入成功');
 }); //註冊一個帳號成功訊息
 
 $('.js-modal-sign-up-check').on('submit', function (event) {
+  resetForm();
   event.preventDefault();
   signUpModal.hide();
   swalFn('註冊成功');
