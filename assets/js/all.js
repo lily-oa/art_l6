@@ -94,7 +94,6 @@ function resetForm() {
   var allInputs = document.querySelectorAll('input');
   var allErrorMsg = document.querySelectorAll('.js-validate-msg');
   var allSubmitBtn = document.querySelectorAll('.js-form-submit-btn');
-  var allSubmitBtn2 = document.querySelectorAll('.js-form-submit-btn-2');
   var classStyle = ['border-danger', 'animate__animated', 'animate__headShake'];
   allInputs.forEach(function (input) {
     $(input).val('');
@@ -105,9 +104,6 @@ function resetForm() {
     $(msg).removeClass('d-block');
   });
   allSubmitBtn.forEach(function (btn) {
-    $(btn).siblings('.disabled-style').removeClass('d-none');
-  });
-  allSubmitBtn2.forEach(function (btn) {
     $(btn).siblings('.disabled-style').removeClass('d-none');
   });
 }
@@ -268,6 +264,10 @@ $('.js-modal-login-check').on('change', function () {
   var formInputs = document.querySelectorAll('.js-modal-login-input');
   checkFormValue(formInputs);
 });
+$('.js-modal-sign-up-check').on('change', function () {
+  var formInputs = document.querySelectorAll('.js-modal-sign-up-input');
+  checkFormValue(formInputs);
+});
 
 function checkFormValue(inputs) {
   var submitBtn = $('.js-form-submit-btn');
@@ -282,30 +282,6 @@ function checkFormValue(inputs) {
     $(submitBtn).siblings('.disabled-style').addClass('d-none');
   } else {
     $(submitBtn).siblings('.disabled-style').removeClass('d-none');
-  }
-}
-
-;
-/*----------------------Sign up 表單-------------------------*/
-
-$('.js-modal-sign-up-check').on('change', function () {
-  var formInputs2 = document.querySelectorAll('.js-modal-sign-up-input');
-  checkFormValue2(formInputs2);
-});
-
-function checkFormValue2(inputs) {
-  var submitBtn2 = $('.js-form-submit-btn-2');
-  var inputValueTrue2 = 0;
-  inputs.forEach(function (input) {
-    if (input.value !== '') {
-      inputValueTrue2 += 1;
-    }
-  });
-
-  if (inputValueTrue2 === inputs.length) {
-    $(submitBtn2).siblings('.disabled-style').addClass('d-none');
-  } else {
-    $(submitBtn2).siblings('.disabled-style').removeClass('d-none');
   }
 }
 
