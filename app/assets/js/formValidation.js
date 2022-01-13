@@ -182,6 +182,7 @@ function checkFormValue(inputs) {
   } else {
     $(submitBtn).siblings('.disabled-style').removeClass('d-none');
   }
+
 };
 
 
