@@ -18,7 +18,13 @@ $(function(){
     swalFn('成功訂閱');
   });
   
+  $('.js-modal-sign-up-check').on('submit', function(event) {
+    event.preventDefault();
+    signUpModal.hide();
+    swalFn('註冊成功');
+  });
 
+  
 });
 
 /*---------------------------------------------- */

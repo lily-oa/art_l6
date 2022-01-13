@@ -25,7 +25,7 @@ $('.forgotPasswordModal-btn').on('click', () => {
 });
 
 $('.js-modal-login-check').on('submit', function(event) {
-  resetForm();
+  
   event.preventDefault();
   signInModal.hide();
   swalFn('登入成功');
@@ -33,7 +33,7 @@ $('.js-modal-login-check').on('submit', function(event) {
 
 //註冊一個帳號成功訊息
 $('.js-modal-sign-up-check').on('submit', function(event) {
-  resetForm();
+  
   event.preventDefault();
   signUpModal.hide();
   swalFn('註冊成功');
