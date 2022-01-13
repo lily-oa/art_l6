@@ -3,7 +3,7 @@ function resetForm() {
   const allInputs = document.querySelectorAll('input');
   const allErrorMsg = document.querySelectorAll('.js-validate-msg');
   const allSubmitBtn = document.querySelectorAll('.js-form-submit-btn');
-  const allSubmitBtn = document.querySelectorAll('.js-form-submit-btn-2');
+  const allSubmitBtn2 = document.querySelectorAll('.js-form-submit-btn-2');
   const classStyle = ['border-danger', 'animate__animated', 'animate__headShake'];
 
   allInputs.forEach((input) => {
@@ -17,6 +17,10 @@ function resetForm() {
   });
 
   allSubmitBtn.forEach((btn) => {
+    $(btn).siblings('.disabled-style').removeClass('d-none');
+  });
+
+  allSubmitBtn2.forEach((btn) => {
     $(btn).siblings('.disabled-style').removeClass('d-none');
   });
 
