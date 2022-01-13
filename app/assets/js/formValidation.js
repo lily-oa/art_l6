@@ -166,6 +166,7 @@ $('.js-modal-sign-up-check').on('change', function() {
   const formInputs = document.querySelectorAll('.js-modal-sign-up-input');
   checkFormValue(formInputs);
 });
+
 function checkFormValue(inputs) {
   const submitBtn = $('.js-form-submit-btn');
   let inputValueTrue = 0;
