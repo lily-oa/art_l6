@@ -3,6 +3,7 @@ function resetForm() {
   const allInputs = document.querySelectorAll('input');
   const allErrorMsg = document.querySelectorAll('.js-validate-msg');
   const allSubmitBtn = document.querySelectorAll('.js-form-submit-btn');
+  const allSubmitBtn = document.querySelectorAll('.js-form-submit-btn-2');
   const classStyle = ['border-danger', 'animate__animated', 'animate__headShake'];
 
   allInputs.forEach((input) => {
@@ -162,10 +163,6 @@ $('.js-modal-login-check').on('change', function() {
   const formInputs = document.querySelectorAll('.js-modal-login-input');
   checkFormValue(formInputs);
 });
-$('.js-modal-sign-up-check').on('change', function() {
-  const formInputs = document.querySelectorAll('.js-modal-sign-up-input');
-  checkFormValue(formInputs);
-});
 
 function checkFormValue(inputs) {
   const submitBtn = $('.js-form-submit-btn');
@@ -184,6 +181,48 @@ function checkFormValue(inputs) {
   }
 
 };
+
+/*----------------------Sign up 表單-------------------------*/
+$('.js-modal-sign-up-check').on('change', function() {
+  const formInputs = document.querySelectorAll('.js-modal-sign-up-input');
+  checkFormValue(formInputs);
+});
+
+function checkFormValue(inputs) {
+  const submitBtn = $('.js-form-submit-btn-2');
+  let inputValueTrue = 0;
+
+  inputs.forEach(function(input) {
+    if (input.value !== '') {
+      inputValueTrue += 1;
+    }
+  });
+
+  if (inputValueTrue === inputs.length) {
+    $(submitBtn).siblings('.disabled-style').addClass('d-none');
+  } else {
+    $(submitBtn).siblings('.disabled-style').removeClass('d-none');
+  }
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //----------------------------------------------------  
