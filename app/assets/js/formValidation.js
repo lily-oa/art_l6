@@ -188,24 +188,24 @@ function checkFormValue(inputs) {
 
 /*----------------------Sign up 表單-------------------------*/
 $('.js-modal-sign-up-check').on('change', function() {
-  const formInputs = document.querySelectorAll('.js-modal-sign-up-input');
-  checkFormValue(formInputs);
+  const formInputs2 = document.querySelectorAll('.js-modal-sign-up-input');
+  checkFormValue2(formInputs);
 });
 
-function checkFormValue(inputs) {
-  const submitBtn = $('.js-form-submit-btn-2');
-  let inputValueTrue = 0;
+function checkFormValue2(inputs) {
+  const submitBtn2 = $('.js-form-submit-btn-2');
+  let inputValueTrue2 = 0;
 
   inputs.forEach(function(input) {
     if (input.value !== '') {
-      inputValueTrue += 1;
+      inputValueTrue2 += 1;
     }
   });
 
-  if (inputValueTrue === inputs.length) {
-    $(submitBtn).siblings('.disabled-style').addClass('d-none');
+  if (inputValueTrue2 === inputs.length) {
+    $(submitBtn2).siblings('.disabled-style').addClass('d-none');
   } else {
-    $(submitBtn).siblings('.disabled-style').removeClass('d-none');
+    $(submitBtn2).siblings('.disabled-style').removeClass('d-none');
   }
 
 };
