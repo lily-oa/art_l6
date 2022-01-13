@@ -290,7 +290,7 @@ function checkFormValue(inputs) {
 
 $('.js-modal-sign-up-check').on('change', function () {
   var formInputs2 = document.querySelectorAll('.js-modal-sign-up-input');
-  checkFormValue2(formInputs);
+  checkFormValue2(formInputs2);
 });
 
 function checkFormValue2(inputs) {
