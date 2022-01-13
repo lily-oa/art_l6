@@ -3,7 +3,6 @@ function resetForm() {
   const allInputs = document.querySelectorAll('input');
   const allErrorMsg = document.querySelectorAll('.js-validate-msg');
   const allSubmitBtn = document.querySelectorAll('.js-form-submit-btn');
-  const allSubmitBtn2 = document.querySelectorAll('.js-form-submit-btn-2');
   const classStyle = ['border-danger', 'animate__animated', 'animate__headShake'];
 
   allInputs.forEach((input) => {
@@ -17,10 +16,6 @@ function resetForm() {
   });
 
   allSubmitBtn.forEach((btn) => {
-    $(btn).siblings('.disabled-style').removeClass('d-none');
-  });
-
-  allSubmitBtn2.forEach((btn) => {
     $(btn).siblings('.disabled-style').removeClass('d-none');
   });
 
@@ -167,6 +162,10 @@ $('.js-modal-login-check').on('change', function() {
   const formInputs = document.querySelectorAll('.js-modal-login-input');
   checkFormValue(formInputs);
 });
+$('.js-modal-sign-up-check').on('change', function() {
+  const formInputs = document.querySelectorAll('.js-modal-sign-up-input');
+  checkFormValue(formInputs);
+});
 
 function checkFormValue(inputs) {
   const submitBtn = $('.js-form-submit-btn');
@@ -185,46 +184,6 @@ function checkFormValue(inputs) {
   }
 
 };
-
-/*----------------------Sign up 表單-------------------------*/
-$('.js-modal-sign-up-check').on('change', function() {
-  const formInputs2 = document.querySelectorAll('.js-modal-sign-up-input');
-  checkFormValue2(formInputs2);
-});
-
-function checkFormValue2(inputs) {
-  const submitBtn2 = $('.js-form-submit-btn-2');
-  let inputValueTrue2 = 0;
-
-  inputs.forEach(function(input) {
-    if (input.value !== '') {
-      inputValueTrue2 += 1;
-    }
-  });
-
-  if (inputValueTrue2 === inputs.length) {
-    $(submitBtn2).siblings('.disabled-style').addClass('d-none');
-  } else {
-    $(submitBtn2).siblings('.disabled-style').removeClass('d-none');
-  }
-
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
