@@ -189,7 +189,7 @@ function checkFormValue(inputs) {
 /*----------------------Sign up 表單-------------------------*/
 $('.js-modal-sign-up-check').on('change', function() {
   const formInputs2 = document.querySelectorAll('.js-modal-sign-up-input');
-  checkFormValue2(formInputs);
+  checkFormValue2(formInputs2);
 });
 
 function checkFormValue2(inputs) {
