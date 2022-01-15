@@ -271,6 +271,7 @@ $('.js-modal-login-check').on('change', function () {
 });
 $('.js-modal-sign-up-check').on('change', function () {
   var formInputs = document.querySelectorAll('.js-modal-sign-up-input');
+  console.log(formInputs);
   checkFormValue(formInputs);
 });
 
