@@ -164,13 +164,14 @@ $('.js-modal-login-check').on('change', function() {
 });
 $('.js-modal-sign-up-check').on('change', function() {
   const formInputs = document.querySelectorAll('.js-modal-sign-up-input');
+  console.log(formInputs);
   checkFormValue(formInputs);
 });
 
 function checkFormValue(inputs) {
   const submitBtn = $('.js-form-submit-btn');
   let inputValueTrue = 0;
-
+  
   inputs.forEach(function(input) {
     if (input.value !== '') {
       inputValueTrue += 1;
