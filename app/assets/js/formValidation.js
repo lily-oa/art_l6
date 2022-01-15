@@ -160,11 +160,12 @@ function checkUserName(obj) {
 
 $('.js-modal-login-check').on('change', function() {
   const formInputs = document.querySelectorAll('.js-modal-login-input');
+  console.log(formInputs);  //印出來看值對不對，除錯用
   checkFormValue(formInputs);
 });
 $('.js-modal-sign-up-check').on('change', function() {
   const formInputs = document.querySelectorAll('.js-modal-sign-up-input');
-  console.log(formInputs);
+  console.log(formInputs);  //印出來看值對不對，除錯用
   checkFormValue(formInputs);
 });
 
