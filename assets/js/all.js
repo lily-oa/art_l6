@@ -377,6 +377,7 @@ $('.searchPassword-check').on('submit', function (event) {
 });
 "use strict";
 
+// 修改 sweetaler2 彈跳訊息的內容及樣式
 function swalFn(msg) {
   Swal.fire({
     position: 'top',
