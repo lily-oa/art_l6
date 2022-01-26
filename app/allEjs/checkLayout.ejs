@@ -48,7 +48,10 @@
   </nav>
   <%- include('../components/buySidebar.ejs') %>
   <%- contents %>
-  <%- include('../components/footer.ejs') %>
+  <div <% if(current === 'checkInfo') { %> hidden <% } %> >
+    <%- include('../components/footer.ejs') %>
+  </div>
+  
   
   <!--swiper-->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
