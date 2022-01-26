@@ -270,10 +270,30 @@
   <div class="row position-relative">
     <div class="col-lg-4 order-lg-last d-lg-flex flex-lg-nowrap flex-lg-column">
       <h1 class="fs-5 mb-3 mb-lg-11">訂購人資訊</h1>
-      <form class="flex-lg-grow-1 mb-5">
+      <form class="flex-lg-grow-1 mb-5 js-form-check js-order-form-check">
         <div class="mb-11">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="name@example.com">
+          <label 
+            for="subcriberEmail" 
+            class="form-label"
+          >
+            Email
+          </label>
+          <input 
+            type="email"
+            name="Email"
+            class="form-control js-form-input js-user-email" 
+            id="subcriberEmail" 
+            placeholder="name@example.com"
+            required
+          >
+          <p 
+            class="
+                    js-validate-msg validate-msg
+                    fs-10 text-danger text-end 
+                    pt-2
+                  "
+          >
+          </p>
         </div>
         <div class="mb-11">
           <label for="name" class="form-label">姓名</label>
