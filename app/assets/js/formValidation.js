@@ -159,6 +159,7 @@ function checkUserName(obj) {
 //關於信用上及表單送出時按鈕的變化
 $('.js-form-check').on('change', function() {
   const formInputs = document.querySelectorAll('.js-form-input');
+  console.log(formInputs);  //印出來看值對不對，除錯用
   checkFormValue(formInputs);
 });
 $('.js-modal-login-check').on('change', function() {

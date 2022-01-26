@@ -24,7 +24,10 @@ $(function(){
     swalFn('註冊成功');
   });
 
-  
+  $('.js-order-form-check').on('submit', function(event) {
+    event.preventDefault();
+    location.href = './checkPayment.html';
+  });
 });
 
 /*---------------------------------------------- */
