@@ -25,6 +25,10 @@ $(function () {
     signUpModal.hide();
     swalFn('註冊成功');
   });
+  $('.js-order-form-check').on('submit', function (event) {
+    event.preventDefault();
+    location.href = './checkPayment.html';
+  });
 });
 /*---------------------------------------------- */
 // loader-inner
@@ -267,6 +271,8 @@ function checkUserName(obj) {
 
 $('.js-form-check').on('change', function () {
   var formInputs = document.querySelectorAll('.js-form-input');
+  console.log(formInputs); //印出來看值對不對，除錯用
+
   checkFormValue(formInputs);
 });
 $('.js-modal-login-check').on('change', function () {
