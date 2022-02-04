@@ -137,15 +137,23 @@ current: checkInfo
           </ul>
         </div>
         <!--pc按鈕-->
-        <a 
-          href="./checkPayment.html" 
-          class="btn btn-secondary btn-lg text-white w-100 d-none d-lg-block hover_full"
-        >
+        <div class="position-relative">
+          <div class="disabled-style"></div>
+          <button 
+            type="submit" 
+            class="
+                    btn btn-secondary btn-lg text-white w-100 
+                    d-none d-lg-block hover_full
+                    js-form-submit-btn
+                  "
+          >
           下一步
-        </a>
+          </button>
+        </div>
+        
       </div>
       <!--pc 卡片區-->
-      <div class="col-lg-8 d-lg-flex flex-lg-column d-none d-lg-block ">
+      <div class="col-lg-8 d-lg-flex flex-lg-column d-none d-lg-block">
         <!--1-->
         <div class="checkCard card mb-11 border-0">
           <div class="row g-0">
@@ -467,7 +475,12 @@ current: checkInfo
         </div>
         <!--卡片 end-->
         <!--pc返迴鍵-->
-        <a href="./checkOrder.html" class="spacilBtn_1 btn btn-outline-secondary btn-lg d-none d-lg-block">返回</a>
+        <a 
+          href="./checkOrder.html" 
+          class="spacilBtn_1 btn btn-outline-secondary btn-lg d-none d-lg-block"
+        >
+          返回
+        </a>
       </div>
     </div>
   </form><!--form end-->
