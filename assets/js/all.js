@@ -24,7 +24,8 @@ $(function () {
     event.preventDefault();
     signUpModal.hide();
     swalFn('註冊成功');
-  });
+  }); //送出表單時就到 checkPayment.html 這個網頁去
+
   $('.js-order-form-check').on('submit', function (event) {
     event.preventDefault();
     location.href = './checkPayment.html';
