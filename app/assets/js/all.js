@@ -34,7 +34,15 @@ $(function(){
   $('.js-payment-form-check').on('submit', function(event){
     event.preventDefault();
     location.href = './checkSuccess.html';
-  });  
+  }); 
+  
+  //detail.html 學生 全票 愛心 hover 的設定
+  $('.js-ticket-type').on('click', function(){
+    const checkedClass = 'border__bottom__hover--checked';
+
+    $('.js-ticket-type').removeClass(checkedClass);
+    $(this).addClass(checkedClass);
+  });
 });
 
 /*---------------------------------------------- */
