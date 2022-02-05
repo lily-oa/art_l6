@@ -128,6 +128,9 @@ function validationForm() {
   validationPassword();
   validationUserName();
   validationPhone();
+  validationCreditCardNumber();
+  validationCreditCardDate();
+  validationCreditCardPassword();
 } //信箱驗證
 
 
@@ -194,7 +197,7 @@ function validationCreditCardDate() {
   var data = {
     inputs: $('.js-credit-card-date'),
     rule: /^[2-9]{1}\d{3}\/[0-1]{1}[0-9]{1}$/,
-    msg: '須為數字，格式為 2021/12'
+    msg: '須為數字，格式為 2022/12'
   };
   validationInputFn(data);
 }
