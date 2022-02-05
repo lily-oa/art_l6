@@ -54,13 +54,57 @@ current: checkPayment
             </li>
 
             <li class="mb-11">
-              <label for="date" class="form-label">有效日期</label>
-              <input type="date" class="form-control" id="date" placeholder="(MM/YY)">
+              <label 
+                for="creditCardDate" 
+                class="form-label"
+              >
+                有效日期
+              </label>
+              <input 
+                type="text"
+                name="有效日期"
+                class="form-control js-form-input js-credit-card-date" 
+                id="creditCardDate" 
+                placeholder="(MM/YY)"
+                pattern="^[2-9]{1}\d{3}\/[01-12]{2}$"
+                maxlength="7"
+                required
+              >
+              <p 
+              class="
+                      js-validate-msg validate-msg
+                      fs-10 text-danger text-end 
+                      pt-2
+                    "
+              >
+              </p>
             </li>
 
             <li class="mb-11">
-              <label for="pword" class="form-label">安全碼</label>
-              <input type="password" class="form-control" id="pword" placeholder="***">
+              <label 
+                for="creditCardPassword" 
+                class="form-label"
+              >
+                安全碼
+              </label>
+              <input 
+                type="text"
+                name="安全碼"
+                class="form-control js-form-input js-credit-card-password" 
+                id="creditCardPassword" 
+                placeholder="***"
+                pattern="\d{3}"
+                maxlength="3"
+                required
+              >
+              <p 
+              class="
+                      js-validate-msg validate-msg
+                      fs-10 text-danger text-end 
+                      pt-2
+                    "
+              >
+              </p>
             </li>
           </ul> 
         <div class="mb-4 mb-lg-16">
