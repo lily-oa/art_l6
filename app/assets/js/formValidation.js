@@ -74,10 +74,33 @@ function validationPhone() {
   };
   validationAllInputsFn(data);
 }
-/*-----------------------尚有信用卡部份未寫----------------------*/
-
+/*-----------------------信用卡部份----------------------*/
+function validationCreditCardNumber() {
+  const data = {
+    inputs: $('.js-credit-card-number'),
+    rule: /^[\d]{4}-[\d]{4}-[\d]{4}-[\d]{4}$/,
+    msg: '須為數字，格式為 0123-4567-8910-1112',
+  };
+  validationInputFn(data);
+}
+function validationCreditCardDate() {
+  const data = {
+    inputs: $('.js-credit-card-date'),
+    rule: /^[2-9]{1}\d{3}\/[0-1]{1}[0-9]{1}$/,
+    msg: '須為數字，格式為 2021/12',
+  };
+  validationInputFn(data);
+}
+function validationCreditCardPassword() {
+  const data = {
+    inputs: $('.js-credit-card-password'),
+    rule: /^\d{3}$/,
+    msg: '須為 3 碼數字',
+  };
+  validationInputFn(data);
+}
 /*-----------------------------------------------------------*/
-//
+// 所有輸入值的驗証
 function validationAllInputsFn(data) {
   const { inputs, rule, msg } = data;
 
