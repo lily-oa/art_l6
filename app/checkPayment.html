@@ -54,12 +54,19 @@ current: checkPayment
           </ul>
         </div>
         <!--pc按鈕-->
-        <a 
-          href="./checkSuccess.html" 
-          class="btn btn-secondary btn-lg text-white w-100 d-none d-lg-block hover_full"
-        >
-          下一步
-        </a>
+        <div class="position-relative">
+          <div class="disabled-style"></div>
+          <button 
+            type="submit" 
+            class="
+                    btn btn-secondary btn-lg text-white w-100 
+                    d-none d-lg-block hover_full
+                    js-form-submit-btn
+                  "
+          >
+            下一步
+          </button>
+        </div>
       </div>
       <!--pc 卡片區-->
       <div class="col-lg-8 d-lg-flex flex-lg-column d-none d-lg-block">
@@ -727,15 +734,18 @@ current: checkPayment
           </a>
         </div>
         <div class="col-6">
-          <a 
-            href="./checkSuccess.html" 
-            class="
-                    btn btn-secondary w-100 py-8 text-white
-                    js-form-submit-btn
-                  "
-          >
-            下一步
-          </a>
+          <div class="positon-relative">
+            <div class="disabled-style"></div>
+            <button 
+              type="submit" 
+              class="
+                      btn btn-secondary w-100 py-8 text-white
+                      js-form-submit-btn
+                    "
+            >
+              下一步
+            </button>
+          </div>
         </div>
       </div>
   </form>
