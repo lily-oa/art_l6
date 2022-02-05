@@ -29,9 +29,9 @@ $(function(){
     event.preventDefault();
     location.href = './checkPayment.html';
   });
-  
+
 //送出表單時就到 checkSuccess.html 這個網頁去
-  $('js-payment-form-check').on('submit', function(event){
+  $('.js-payment-form-check').on('submit', function(event){
     event.preventDefault();
     location.href = './checkSuccess.html';
   });  
