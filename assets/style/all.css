@@ -18787,10 +18787,6 @@ p {
   color: #630834 !important;
 }
 
-.navbarDown_detail .active {
-  color: #630834 !important;
-}
-
 @media (max-width: 767px) {
   .nav-scroller {
     height: 3.3125rem;
