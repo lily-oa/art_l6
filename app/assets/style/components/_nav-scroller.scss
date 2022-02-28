@@ -2,10 +2,6 @@
 .navbarDown_detail:hover {
     color: $primary !important;   
 }
-// active
-.navbarDown_detail .active {
-  color: $primary !important;  
-}
 
 // mobile-mx(767)
 @include mobile-mx{
